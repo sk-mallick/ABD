@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="ABD Programs — Concrete plans for Land, Agriculture, Education, Health, Mining, Women and Social Reform in Odisha.">
+        <title>Programs — Amal Vikas Dal | Odisha Bahujan Samya</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Noto+Serif+Odia:wght@400;600&family=Tiro+Devanagari+Hindi&family=Lora:wght@600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/components.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <style>
+    /* ── PAGE BANNER ── */
+    .page-banner {
+      background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 60%, #1A237E 100%);
+      padding: 100px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .page-banner-content { position: relative; z-index: 1; }
+    .page-banner-overline {
+      display: inline-block; font-size: 0.8rem; letter-spacing: 3px;
+      text-transform: uppercase; color: #FFD700; margin-bottom: 1rem; font-family: 'Lora', serif;
+    }
+    .page-banner h1 {
+      font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 800;
+      color: #ffffff; margin: 0 0 0.75rem; line-height: 1.2;
+    }
+    .page-banner-subtitle {
+      font-size: 1.1rem; color: rgba(255,255,255,0.85); font-family: 'Lora', serif;
+    }
+    .breadcrumb {
+      display: flex; justify-content: center; gap: 0.5rem;
+      margin-top: 1.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.65);
+    }
+    .breadcrumb a { color: #FFD700; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { color: rgba(255,255,255,0.4); }
+
+    /* ── PROGRAM TABS ── */
+    .programs-section { padding: 80px 0; background: #f8faf8; }
+    .program-tabs {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 8px; margin-bottom: 40px;
+    }
+    .program-tab {
+      padding: 12px 24px; border: 2px solid #2E7D32; border-radius: 30px;
+      background: transparent; color: #2E7D32; cursor: pointer;
+      font-weight: 600; font-size: 0.95rem; transition: all 0.3s ease;
+    }
+    .program-tab.active, .program-tab:hover { background: #2E7D32; color: #fff; }
+    .program-panel {
+      display: none; background: #fff; border-radius: 16px;
+      padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .program-panel.active { display: block; }
+    .program-panel h3 {
+      font-family: 'Playfair Display', serif; font-size: 1.8rem;
+      color: #1B5E20; margin-bottom: 24px;
+    }
+    .program-panel .panel-icon { font-size: 2.5rem; margin-bottom: 12px; display: block; }
+    .program-panel ul { list-style: none; padding: 0; }
+    .program-panel ul li {
+      padding: 12px 0; border-bottom: 1px solid #f0f0f0;
+      line-height: 1.7; position: relative; padding-left: 28px;
+    }
+    .program-panel ul li::before {
+      content: '✓'; position: absolute; left: 0; color: #2E7D32; font-weight: 700;
+    }
+
+    /* ── JOIN CTA ── */
+    .join-cta {
+      background: linear-gradient(135deg, #1B5E20, #2E7D32);
+      padding: 80px 0; text-align: center; color: #fff;
+    }
+    .join-cta h2 {
+      font-family: 'Playfair Display', serif; font-size: 2.4rem;
+      font-weight: 800; margin-bottom: 1rem;
+    }
+    .join-cta p {
+      font-size: 1.15rem; opacity: 0.9; margin-bottom: 2rem;
+      max-width: 600px; margin-left: auto; margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+      .page-banner { padding: 80px 0 40px; }
+      .page-banner h1 { font-size: 2rem; }
+      .program-tab { padding: 10px 18px; font-size: 0.85rem; }
+      .program-panel { padding: 24px; }
+      .program-panel h3 { font-size: 1.4rem; }
+      .join-cta h2 { font-size: 1.8rem; }
+    }
+  </style>
+    </head>
+    <body>
+
+        <!-- ═══ NAVBAR ═══ -->
+        <header>
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <div class="container">
+                    <!-- Brand -->
+                    <a href="index.html" class="nav-brand">
+                        <img src="images/logo/abd-logo-white.png"
+                            alt="ABD Logo">
+                        <div class="nav-brand-text">
+                            <span class="nav-brand-name">
+                                <span data-lang="en">Amal Vikas Dal</span>
+                                <span data-lang="od" style="display:none">ଅମଳ
+                                    ବିକାଶ ଦଳ</span>
+                                <span data-lang="hi" style="display:none">अमल
+                                    विकास दल</span>
+                            </span>
+                            <span class="nav-brand-tagline">
+                                <span data-lang="en">Odisha Bahujan Samya</span>
+                                <span data-lang="od" style="display:none">ଓଡ଼ିଶା
+                                    ବହୁଜନ ସାମ୍ୟ</span>
+                                <span data-lang="hi" style="display:none">ओडिशा
+                                    बहुजन साम्य</span>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Nav Links -->
+                    <ul class="nav-links">
+                        <li><a href="index.html">
+                                <span data-lang="en">Home</span>
+                                <span data-lang="od" style="display:none">ମୁଖ୍ୟ
+                                    ପୃଷ୍ଠା</span>
+                                <span data-lang="hi" style="display:none">मुख्य
+                                    पृष्ठ</span>
+                            </a></li>
+                        <li><a href="about.html">
+                                <span data-lang="en">About</span>
+                                <span data-lang="od" style="display:none">ଆମ
+                                    ବିଷୟ</span>
+                                <span data-lang="hi" style="display:none">हमारे
+                                    बारे में</span>
+                            </a></li>
+                        <li><a href="manifesto.html">
+                                <span data-lang="en">Manifesto</span>
+                                <span data-lang="od"
+                                    style="display:none">ଇସ୍ତାହାର</span>
+                                <span data-lang="hi"
+                                    style="display:none">घोषणापत्र</span>
+                            </a></li>
+                        <li><a href="programs.html" class="active">
+                                <span data-lang="en">Programs</span>
+                                <span data-lang="od"
+                                    style="display:none">କାର୍ଯ୍ୟସୂଚୀ</span>
+                                <span data-lang="hi"
+                                    style="display:none">कार्यक्रम</span>
+                            </a></li>
+                        <li><a href="gallery.html">
+                                <span data-lang="en">Gallery</span>
+                                <span data-lang="od"
+                                    style="display:none">ଗ୍ୟାଲେରୀ</span>
+                                <span data-lang="hi"
+                                    style="display:none">गैलरी</span>
+                            </a></li>
+                        <li><a href="contact.html">
+                                <span data-lang="en">Contact</span>
+                                <span data-lang="od"
+                                    style="display:none">ଯୋଗାଯୋଗ</span>
+                                <span data-lang="hi"
+                                    style="display:none">संपर्क</span>
+                            </a></li>
+                    </ul>
+
+                    <!-- Right: Language toggle + Join Us -->
+                    <div class="nav-right">
+                        <div class="lang-toggle">
+                            <button class="lang-btn active" data-lang="en"
+                                aria-label="Switch to English">EN</button>
+                            <button class="lang-btn" data-lang="od"
+                                aria-label="Switch to Odia">ଓଡ଼</button>
+                            <button class="lang-btn" data-lang="hi"
+                                aria-label="Switch to Hindi">हि</button>
+                        </div>
+                        <a href="contact.html" class="btn-join">
+                            <span data-lang="en">Join Us</span>
+                            <span data-lang="od" style="display:none">ଯୋଗ
+                                ଦିଅ</span>
+                            <span data-lang="hi"
+                                style="display:none">जुड़ें</span>
+                        </a>
+                    </div>
+
+                    <!-- Hamburger -->
+                    <button class="hamburger" aria-label="Open menu"
+                        aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Mobile Full-Screen Menu -->
+            <div class="mobile-menu" role="dialog" aria-modal="true"
+                aria-label="Mobile navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">
+                            <span data-lang="en">Home</span>
+                            <span data-lang="od" style="display:none">ମୁଖ୍ୟ
+                                ପୃଷ୍ଠା</span>
+                            <span data-lang="hi" style="display:none">मुख्य
+                                पृष्ठ</span>
+                        </a></li>
+                    <li><a href="about.html">
+                            <span data-lang="en">About</span>
+                            <span data-lang="od" style="display:none">ଆମ
+                                ବିଷୟ</span>
+                            <span data-lang="hi" style="display:none">हमारे बारे
+                                में</span>
+                        </a></li>
+                    <li><a href="manifesto.html">
+                            <span data-lang="en">Manifesto</span>
+                            <span data-lang="od"
+                                style="display:none">ଇସ୍ତାହାର</span>
+                            <span data-lang="hi"
+                                style="display:none">घोषणापत्र</span>
+                        </a></li>
+                    <li><a href="programs.html">
+                            <span data-lang="en">Programs</span>
+                            <span data-lang="od"
+                                style="display:none">କାର୍ଯ୍ୟସୂଚୀ</span>
+                            <span data-lang="hi"
+                                style="display:none">कार्यक्रम</span>
+                        </a></li>
+                    <li><a href="gallery.html">
+                            <span data-lang="en">Gallery</span>
+                            <span data-lang="od"
+                                style="display:none">ଗ୍ୟାଲେରୀ</span>
+                            <span data-lang="hi"
+                                style="display:none">गैलरी</span>
+                        </a></li>
+                    <li><a href="contact.html">
+                            <span data-lang="en">Contact</span>
+                            <span data-lang="od"
+                                style="display:none">ଯୋଗାଯୋଗ</span>
+                            <span data-lang="hi"
+                                style="display:none">संपर्क</span>
+                        </a></li>
+                </ul>
+                <div class="mobile-lang-row">
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="od">ଓଡ଼</button>
+                    <button class="lang-btn" data-lang="hi">हि</button>
+                </div>
+                <a href="contact.html" class="btn btn-primary mobile-join">
+                    <span data-lang="en">Join the Movement</span>
+                    <span data-lang="od" style="display:none">ଆନ୍ଦୋଳନରେ ଯୋଗ
+                        ଦିଅ</span>
+                    <span data-lang="hi" style="display:none">आंदोलन में शामिल
+                        हों</span>
+                </a>
+                <button class="mobile-close" aria-label="Close menu"
+                    style="position:absolute;top:20px;right:20px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;">✕</button>
+            </div>
+        </header>
+
+        <main>
+
+            <!-- ═══ PAGE BANNER ═══ -->
+            <section class="page-banner">
+                <div class="container">
+                    <div class="page-banner-content">
+                        <div class="page-banner-overline">
+                            <span data-lang="en">ABD Programs</span>
+                            <span data-lang="od" style="display:none">ABD
+                                କାର୍ଯ୍ୟସୂଚୀ</span>
+                            <span data-lang="hi" style="display:none">ABD
+                                कार्यक्रम</span>
+                        </div>
+                        <h1>
+                            <span data-lang="en">Our Programs</span>
+                            <span data-lang="od" style="display:none">ଆମ
+                                କାର୍ଯ୍ୟସୂଚୀ</span>
+                            <span data-lang="hi" style="display:none">हमारे
+                                कार्यक्रम</span>
+                        </h1>
+                        <p class="page-banner-subtitle">
+                            <span data-lang="en">Concrete Plans for Every
+                                Section of Society</span>
+                            <span data-lang="od" style="display:none">ସମାଜର
+                                ପ୍ରତ୍ୟେକ ଅଂଶ ପାଇଁ ଠୋସ ଯୋଜନା</span>
+                            <span data-lang="hi" style="display:none">समाज के हर
+                                वर्ग के लिए ठोस योजनाएँ</span>
+                        </p>
+                        <div class="breadcrumb">
+                            <a href="index.html">
+                                <span data-lang="en">Home</span>
+                                <span data-lang="od" style="display:none">ମୁଖ୍ୟ
+                                    ପୃଷ୍ଠା</span>
+                                <span data-lang="hi" style="display:none">मुख्य
+                                    पृष्ठ</span>
+                            </a>
+                            <span>/</span>
+                            <span>
+                                <span data-lang="en">Programs</span>
+                                <span data-lang="od"
+                                    style="display:none">କାର୍ଯ୍ୟସୂଚୀ</span>
+                                <span data-lang="hi"
+                                    style="display:none">कार्यक्रम</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ PROGRAMS TABS ═══ -->
+            <section class="programs-section">
+                <div class="container">
+
+                    <!-- Tab buttons -->
+                    <div class="program-tabs reveal">
+                        <button class="program-tab active" data-tab="land">
+                            <span data-lang="en">🏞️ Land</span>
+                            <span data-lang="od" style="display:none">🏞️
+                                ଭୂମି</span>
+                            <span data-lang="hi" style="display:none">🏞️
+                                भूमि</span>
+                        </button>
+                        <button class="program-tab" data-tab="agriculture">
+                            <span data-lang="en">🌾 Agriculture</span>
+                            <span data-lang="od" style="display:none">🌾
+                                କୃଷି</span>
+                            <span data-lang="hi" style="display:none">🌾
+                                कृषि</span>
+                        </button>
+                        <button class="program-tab" data-tab="education">
+                            <span data-lang="en">📚 Education</span>
+                            <span data-lang="od" style="display:none">📚
+                                ଶିକ୍ଷା</span>
+                            <span data-lang="hi" style="display:none">📚
+                                शिक्षा</span>
+                        </button>
+                        <button class="program-tab" data-tab="health">
+                            <span data-lang="en">🏥 Health</span>
+                            <span data-lang="od" style="display:none">🏥
+                                ସ୍ୱାସ୍ଥ୍ୟ</span>
+                            <span data-lang="hi" style="display:none">🏥
+                                स्वास्थ्य</span>
+                        </button>
+                        <button class="program-tab" data-tab="mining">
+                            <span data-lang="en">⛏️ Mining &amp; Industry</span>
+                            <span data-lang="od" style="display:none">⛏️ ଖଣି ଓ
+                                ଶିଳ୍ପ</span>
+                            <span data-lang="hi" style="display:none">⛏️ खनन एवं
+                                उद्योग</span>
+                        </button>
+                        <button class="program-tab" data-tab="women">
+                            <span data-lang="en">👩 Women</span>
+                            <span data-lang="od" style="display:none">👩 ମହିଳା ଓ
+                                ଯୁବ</span>
+                            <span data-lang="hi" style="display:none">👩 महिला
+                                एवं युवा</span>
+                        </button>
+                        <button class="program-tab" data-tab="social">
+                            <span data-lang="en">🕊️ Social Reform</span>
+                            <span data-lang="od" style="display:none">🕊️
+                                ସାମାଜିକ ସଂସ୍କାର</span>
+                            <span data-lang="hi" style="display:none">🕊️
+                                सामाजिक सुधार</span>
+                        </button>
+                    </div>
+
+                    <!-- ── LAND Panel ── -->
+                    <div class="program-panel active reveal" id="land">
+                        <span class="panel-icon">🏞️</span>
+                        <h3>
+                            <span data-lang="en">Land</span>
+                            <span data-lang="od"
+                                style="display:none">ଭୂମି</span>
+                            <span data-lang="hi"
+                                style="display:none">भूमि</span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <span data-lang="en">Land is a person's identity
+                                    and source of livelihood. Use
+                                    panchayat-level systems to provide land to
+                                    the landless.</span>
+                                <span data-lang="od" style="display:none">ଜମି
+                                    ହେଉଛି ବ୍ୟକ୍ତିର ପରିଚୟ ଓ ଜୀବିକାର ଆଧାର। ପଞ୍ଚାୟତ
+                                    ସ୍ତରୀୟ ବ୍ୟବସ୍ଥା ମାଧ୍ୟମରେ ଭୂମିହୀନଙ୍କୁ ଜମି
+                                    ଯୋଗାଅ।</span>
+                                <span data-lang="hi" style="display:none">भूमि
+                                    व्यक्ति की पहचान और आजीविका का स्रोत है।
+                                    पंचायत-स्तरीय प्रणाली के माध्यम से भूमिहीनों
+                                    को ज़मीन उपलब्ध कराएं।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Facilitate smooth land
+                                    reform procedures.</span>
+                                <span data-lang="od" style="display:none">ଭୂମି
+                                    ସଂସ୍କାର ପ୍ରକ୍ରିୟାକୁ ସୁଗମ କରାଅ।</span>
+                                <span data-lang="hi"
+                                    style="display:none">भूमिहीनों के लिए भूमि
+                                    सुधार प्रक्रिया सुगम बनाएं।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Completely end forced land
+                                    occupation in Scheduled Tribe areas.</span>
+                                <span data-lang="od"
+                                    style="display:none">ଅନୁସୂଚିତ ଜନଜାତି ଅଞ୍ଚଳରେ
+                                    ଜବରଦସ୍ତ ଭୂମି ଅଧିଗ୍ରହଣ ସମ୍ପୂର୍ଣ ବନ୍ଦ
+                                    କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">अनुसूचित जनजाति
+                                    क्षेत्रों में जबरन भूमि अधिग्रहण पूरी तरह
+                                    बंद करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Take steps to make
+                                    unproductive land productive.</span>
+                                <span data-lang="od"
+                                    style="display:none">ଅନୁତ୍ପାଦକ ଭୂମିକୁ
+                                    ଉତ୍ପାଦକ କରିବା ପାଇଁ ପଦକ୍ଷେପ ନିଅ।</span>
+                                <span data-lang="hi" style="display:none">बंजर
+                                    भूमि को उत्पादक बनाने के लिए कदम
+                                    उठाएं।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Quickly resolve land-title
+                                    and ownership disputes.</span>
+                                <span data-lang="od" style="display:none">ଭୂମି
+                                    ମାଲିକାନା ବିବାଦର ଶୀଘ୍ର ସମାଧାନ କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">भूमि-स्वामित्व विवादों
+                                    का त्वरित समाधान करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Rebuild abandoned villages
+                                    as planned settlements.</span>
+                                <span data-lang="od"
+                                    style="display:none">ପରିତ୍ୟକ୍ତ ଗ୍ରାମଗୁଡ଼ିକୁ
+                                    ନିୟୋଜିତ ବସ୍ତି ଭାବରେ ପୁନର୍ନିର୍ମାଣ କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">परित्यक्त गाँवों को
+                                    नियोजित बस्तियों के रूप में पुनर्निर्मित
+                                    करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Protect and maintain
+                                    ancestral or community forest land.</span>
+                                <span data-lang="od"
+                                    style="display:none">ପୂର୍ବପୁରୁଷ ବା ସାମୁଦାୟିକ
+                                    ଜଙ୍ଗଲ ଜମିର ସୁରକ୍ଷା ଓ ରକ୍ଷଣାବେକ୍ଷଣ କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">पूर्वजों की या
+                                    सामुदायिक वन भूमि की सुरक्षा और रखरखाव
+                                    करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Provide funds for building
+                                    community structures.</span>
+                                <span data-lang="od"
+                                    style="display:none">ସାମୁଦାୟିକ ଭବନ ନିର୍ମାଣ
+                                    ପାଇଁ ଅନୁଦାନ ଯୋଗାଅ।</span>
+                                <span data-lang="hi"
+                                    style="display:none">सामुदायिक भवन निर्माण
+                                    के लिए धन उपलब्ध कराएं।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Make all lands available
+                                    for use for 1,000 years.</span>
+                                <span data-lang="od" style="display:none">ସମସ୍ତ
+                                    ଜମିକୁ ୧,୦୦୦ ବର୍ଷ ପାଇଁ ବ୍ୟବହାର ଯୋଗ୍ୟ
+                                    କର।</span>
+                                <span data-lang="hi" style="display:none">सभी
+                                    भूमि को १,००० वर्षों के लिए उपयोग योग्य
+                                    बनाएं।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Build affordable housing in
+                                    cities. No slums.</span>
+                                <span data-lang="od" style="display:none">ସହରରେ
+                                    ସୁଲଭ ଆବାସ ନିର୍ମାଣ କର। ସହରରେ ବସ୍ତି ରହିବ
+                                    ନାହିଁ।</span>
+                                <span data-lang="hi" style="display:none">शहरों
+                                    में किफायती आवास बनाएं। शहरों में झुग्गियाँ
+                                    नहीं होंगी।</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ── AGRICULTURE Panel ── -->
+                    <div class="program-panel reveal" id="agriculture">
+                        <span class="panel-icon">🌾</span>
+                        <h3>
+                            <span data-lang="en">Agriculture</span>
+                            <span data-lang="od"
+                                style="display:none">କୃଷି</span>
+                            <span data-lang="hi"
+                                style="display:none">कृषि</span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <span data-lang="en">Support all types of
+                                    agricultural development including land
+                                    reform, science in agriculture.</span>
+                                <span data-lang="od" style="display:none">ଭୂମି
+                                    ସଂସ୍କାର, କୃଷିରେ ବିଜ୍ଞାନ ସହ ସମସ୍ତ ପ୍ରକାରର
+                                    କୃଷି ବିକାଶକୁ ସମର୍ଥନ।</span>
+                                <span data-lang="hi" style="display:none">भूमि
+                                    सुधार, कृषि में विज्ञान और प्रौद्योगिकी के
+                                    उपयोग सहित सभी प्रकार के कृषि विकास को
+                                    समर्थन।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Use contract farming to
+                                    connect all Gram Panchayat farming
+                                    lands.</span>
+                                <span data-lang="od" style="display:none">ଚୁକ୍ତି
+                                    ଚାଷ ମାଧ୍ୟମରେ ସମସ୍ତ ଗ୍ରାମ ପଞ୍ଚାୟତ ସ୍ତରୀୟ ଚାଷ
+                                    ଜମିକୁ ସଂଯୋଗ କର।</span>
+                                <span data-lang="hi" style="display:none">अनुबंध
+                                    खेती के माध्यम से सभी ग्राम पंचायत स्तरीय
+                                    कृषि भूमि को जोड़ें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Establish
+                                    "Odisha Krushak Bank" for farmers.</span>
+                                <span data-lang="od"
+                                    style="display:none">କୃଷକମାନଙ୍କ ପାଇଁ
+                                    "ଓଡ଼ିଶା କୃଷକ ବ୍ୟାଙ୍କ" ସ୍ଥାପନ କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none"><strong>"ओडिशा कृषक बैंक"</strong>
+                                    की स्थापना — सभी कृषि लेनदेन के लिए।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Provide agricultural
+                                    workers monthly pension of ₹5,000.</span>
+                                <span data-lang="od" style="display:none">କୃଷି
+                                    ଶ୍ରମିକ, ଭାଗଚାଷୀ ଓ କୃଷକଙ୍କୁ ମାସିକ ₹୫,୦୦୦
+                                    ପେନ୍ସନ ଦିଅ।</span>
+                                <span data-lang="hi" style="display:none">कृषि
+                                    मजदूरों, बटाईदारों और किसानों को
+                                    <strong>मासिक ₹५,००० पेंशन</strong>।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Crop protection and
+                                    distribution in coordination with state
+                                    regulations.</span>
+                                <span data-lang="od" style="display:none">ଫସଲ
+                                    ସୁରକ୍ଷା ଓ ବଣ୍ଟନ ବ୍ୟବସ୍ଥା ରାଜ୍ୟ ସରକାରୀ ନିୟମ
+                                    ସହ ସମନ୍ୱୟରେ ପରିଚାଳନା କର।</span>
+                                <span data-lang="hi" style="display:none">फसल
+                                    सुरक्षा और वितरण प्रणाली राज्य सरकारी नियमों
+                                    के साथ समन्वय में।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Financial and technical
+                                    support based on climate resilience.</span>
+                                <span data-lang="od" style="display:none">ଜଳବାୟୁ
+                                    ସହନଶୀଳତା ଓ ଉତ୍ପାଦନ କ୍ଷମତା ଆଧାରରେ କୃଷକଙ୍କୁ
+                                    ଆର୍ଥିକ ଓ ବୈଷୟିକ ସହାୟତା।</span>
+                                <span data-lang="hi" style="display:none">जलवायु
+                                    लचीलेपन और उत्पादन क्षमता के आधार पर किसानों
+                                    को वित्तीय और तकनीकी सहायता।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Protect land rights under
+                                    Land Reform laws.</span>
+                                <span data-lang="od" style="display:none">ଭୂମି
+                                    ସଂସ୍କାର ଆଇନ ଅଧୀନରେ ଗ୍ୟାରେଣ୍ଟିଡ ଭୂମି ଅଧିକାରର
+                                    ସୁରକ୍ଷା କର।</span>
+                                <span data-lang="hi" style="display:none">भूमि
+                                    सुधार कानूनों के तहत गारंटीकृत भूमि अधिकारों
+                                    की रक्षा।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Priority to mechanised
+                                    farming in high yield areas.</span>
+                                <span data-lang="od" style="display:none">ଅଧିକ
+                                    କୃଷି ଉପଜ ଅଞ୍ଚଳରେ ଯନ୍ତ୍ରଚାଳିତ ଚାଷକୁ
+                                    ପ୍ରାଥମିକତା ଦିଅ।</span>
+                                <span data-lang="hi" style="display:none">अधिक
+                                    कृषि उपज वाले क्षेत्रों में मशीनीकृत खेती को
+                                    प्राथमिकता।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">In low-yield areas:
+                                    encourage ginger, chilli, sesame
+                                    crops.</span>
+                                <span data-lang="od" style="display:none">କମ ଉପଜ
+                                    ଅଞ୍ଚଳରେ ଅଦା, ଲଙ୍କା, ରାଶି ଫସଲକୁ ଉତ୍ସାହିତ
+                                    କର।</span>
+                                <span data-lang="hi" style="display:none">कम उपज
+                                    वाले क्षेत्रों में अदरक, मिर्च, तिल जैसी
+                                    फसलों को प्रोत्साहित करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Focus on commercial,
+                                    profitable oilseeds, dal, vegetables,
+                                    fruits.</span>
+                                <span data-lang="od"
+                                    style="display:none">ବାଣିଜ୍ୟିକ, ଲାଭଦାୟକ
+                                    ତୈଳବୀଜ, ଡାଲି, ପରିବା, ଫଳ ଉପରେ ଧ୍ୟାନ
+                                    ଦିଅ।</span>
+                                <span data-lang="hi"
+                                    style="display:none">व्यावसायिक, लाभदायक
+                                    तिलहन, दाल, सब्जी, फल उत्पादन पर ध्यान
+                                    दें।</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ── EDUCATION Panel ── -->
+                    <div class="program-panel reveal" id="education">
+                        <span class="panel-icon">📚</span>
+                        <h3>
+                            <span data-lang="en">Education</span>
+                            <span data-lang="od"
+                                style="display:none">ଶିକ୍ଷା</span>
+                            <span data-lang="hi"
+                                style="display:none">शिक्षा</span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <span data-lang="en">Ensure primary education
+                                    quality. Promote IT skill development in
+                                    rural areas.</span>
+                                <span data-lang="od"
+                                    style="display:none">ପ୍ରାଥମିକ ଶିକ୍ଷାର
+                                    ଗୁଣବତ୍ତା ସୁନିଶ୍ଚିତ କର। ଗ୍ରାମୀଣ ଅଞ୍ଚଳରେ ଆଇଟି
+                                    କୌଶଳ ବିକାଶକୁ ପ୍ରୋତ୍ସାହିତ କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">प्राथमिक शिक्षा की
+                                    गुणवत्ता सुनिश्चित करें। ग्रामीण क्षेत्रों
+                                    में IT कौशल विकास को बढ़ावा।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Establish quality skill
+                                    development centres in unelectrified
+                                    areas.</span>
+                                <span data-lang="od"
+                                    style="display:none">ବିଦ୍ୟୁତହୀନ ଅଞ୍ଚଳରେ
+                                    ଗୁଣବତ୍ତାପୂର୍ଣ୍ଣ କୌଶଳ ବିକାଶ କେନ୍ଦ୍ର ଓ ଆଇଟି
+                                    ପ୍ରଶିକ୍ଷଣ ସଂସ୍ଥା ସ୍ଥାପନ କର।</span>
+                                <span data-lang="hi" style="display:none">बिना
+                                    बिजली वाले क्षेत्रों में गुणवत्तापूर्ण कौशल
+                                    विकास केंद्र और IT प्रशिक्षण संस्थान स्थापित
+                                    करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Make education
+                                    career-oriented.</span>
+                                <span data-lang="od"
+                                    style="display:none">ଶିକ୍ଷାକୁ କ୍ୟାରିଅର-ମୁଖୀ
+                                    କର।</span>
+                                <span data-lang="hi" style="display:none">शिक्षा
+                                    का माध्यम मातृभाषा हो और करियर-उन्मुख
+                                    हो।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Ensure equal educational
+                                    standards for girls and boys.</span>
+                                <span data-lang="od" style="display:none">ଝିଅ ଓ
+                                    ପୁଅ ପାଇଁ ସମାନ ଶୈକ୍ଷିକ ମାନ ଓ ବୃତ୍ତିଗତ
+                                    ପ୍ରଶିକ୍ଷଣ ସୁନିଶ୍ଚିତ କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">लड़कियों और लड़कों के
+                                    लिए समान शैक्षणिक मानक और व्यावसायिक
+                                    प्रशिक्षण।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Schools and public places
+                                    free of religious rituals.</span>
+                                <span data-lang="od"
+                                    style="display:none">ବିଦ୍ୟାଳୟ ଓ ସାର୍ବଜନୀନ
+                                    ସ୍ଥାନ କୌଣସି ନିର୍ଦ୍ଦିଷ୍ଟ ଧର୍ମୀୟ ପ୍ରାର୍ଥନା ବା
+                                    ରୀତିନୀତିରୁ ମୁକ୍ତ ରହିବ।</span>
+                                <span data-lang="hi"
+                                    style="display:none">स्कूलों, कार्यालयों,
+                                    बैंकों और सार्वजनिक स्थानों में किसी विशेष
+                                    धर्म की प्रार्थना नहीं।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Build libraries and
+                                    playgrounds in schools.</span>
+                                <span data-lang="od"
+                                    style="display:none">ବିଦ୍ୟାଳୟରେ ପୁସ୍ତକାଳୟ ଓ
+                                    କ୍ରୀଡ଼ା ପଡ଼ିଆ ନିର୍ମାଣ କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">स्कूलों में पुस्तकालय
+                                    और खेल मैदान बनाएं।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Special education
+                                    provisions for disabled students.</span>
+                                <span data-lang="od"
+                                    style="display:none">ବିକଳାଙ୍ଗ ଛାତ୍ରମାନଙ୍କ
+                                    ପାଇଁ ବିଶେଷ ଶିକ୍ଷା ବ୍ୟବସ୍ଥା କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">विकलांग छात्रों के लिए
+                                    विशेष शिक्षा व्यवस्था।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Quality vocational skills
+                                    from school level.</span>
+                                <span data-lang="od"
+                                    style="display:none">ବିଦ୍ୟାଳୟ ସ୍ତରରୁ
+                                    ଗୁଣବତ୍ତାପୂର୍ଣ୍ଣ ବୃତ୍ତିଗତ କୌଶଳ ଶିକ୍ଷା
+                                    ଦିଅ।</span>
+                                <span data-lang="hi" style="display:none">स्कूल
+                                    स्तर से गुणवत्तापूर्ण व्यावसायिक कौशल
+                                    शिक्षा।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Teach Odisha's own
+                                    languages — Sambalpuri, Koraputia,
+                                    Halbi.</span>
+                                <span data-lang="od"
+                                    style="display:none">ଓଡ଼ିଶାର ନିଜ ଭାଷା —
+                                    ସମ୍ବଲପୁରୀ, କୋରାପୁଟିଆ, ହଲ୍ବୀ — ବିଦ୍ୟାଳୟରେ
+                                    ପଢ଼ାଅ।</span>
+                                <span data-lang="hi" style="display:none">ओडिशा
+                                    की अपनी भाषाओं — संबलपुरी, कोरापुटिया, हलबी,
+                                    कुर्मा — को स्कूलों में पढ़ाया जाए।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Equal salary for government
+                                    and private teachers.</span>
+                                <span data-lang="od" style="display:none">ସରକାରୀ
+                                    ଓ ଘରୋଇ ଶିକ୍ଷକଙ୍କ ପାଇଁ ସମାନ ବେତନ ସୁନିଶ୍ଚିତ
+                                    କର।</span>
+                                <span data-lang="hi" style="display:none">सरकारी
+                                    और निजी शिक्षकों के लिए समान वेतन सुनिश्चित
+                                    करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">At least 2 schools per
+                                    Panchayat in tribal areas.</span>
+                                <span data-lang="od"
+                                    style="display:none">ଆଦିବାସୀ ଅଞ୍ଚଳରେ ପ୍ରତି
+                                    ପଞ୍ଚାୟତରେ କମ୍ ସେ କମ୍ ୨ଟି ବିଦ୍ୟାଳୟ ନିର୍ମାଣ
+                                    କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">आदिवासी क्षेत्रों में
+                                    प्रति पंचायत कम से कम २ स्कूल बनाएं।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Implement Right to
+                                    Education Act.</span>
+                                <span data-lang="od" style="display:none">ଶିକ୍ଷା
+                                    ଅଧିକାର ଆଇନ କାର୍ଯ୍ୟକାରୀ କର।</span>
+                                <span data-lang="hi" style="display:none">शिक्षा
+                                    का अधिकार अधिनियम लागू करें।</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ── HEALTH Panel ── -->
+                    <div class="program-panel reveal" id="health">
+                        <span class="panel-icon">🏥</span>
+                        <h3>
+                            <span data-lang="en">Health</span>
+                            <span data-lang="od"
+                                style="display:none">ସ୍ୱାସ୍ଥ୍ୟ</span>
+                            <span data-lang="hi"
+                                style="display:none">स्वास्थ्य</span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <span data-lang="en">Prepare epidemic disease
+                                    prevention infrastructure.</span>
+                                <span data-lang="od"
+                                    style="display:none">ମହାମାରୀ ରୋଗ ନିବାରଣ ପାଇଁ
+                                    ଚିକିତ୍ସା ପ୍ରତିକ୍ରିୟା ଭିତ୍ତିଭୂମି ପ୍ରସ୍ତୁତ
+                                    କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">महामारी रोग निवारण के
+                                    लिए चिकित्सा प्रतिक्रिया बुनियादी ढाँचा
+                                    तैयार करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Proportionate doctors and
+                                    staff in every Panchayat.</span>
+                                <span data-lang="od"
+                                    style="display:none">ପ୍ରତ୍ୟେକ ପଞ୍ଚାୟତରେ
+                                    ଆନୁପାତିକ ସଂଖ୍ୟାରେ ଡାକ୍ତର ଓ ସ୍ୱାସ୍ଥ୍ୟ
+                                    କର୍ମଚାରୀ ନିଯୁକ୍ତ କର।</span>
+                                <span data-lang="hi" style="display:none">हर
+                                    पंचायत में आनुपातिक संख्या में डॉक्टर और
+                                    पैरामेडिकल कर्मचारी।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Ensure timely
+                                    treatment.</span>
+                                <span data-lang="od" style="display:none">ସମୟ
+                                    ଭିତରେ ଚିକିତ୍ସା ସୁନିଶ୍ଚିତ କର।</span>
+                                <span data-lang="hi" style="display:none">समय पर
+                                    चिकित्सा सुनिश्चित करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Primary health centres in
+                                    every Gram Panchayat.</span>
+                                <span data-lang="od"
+                                    style="display:none">ପ୍ରତ୍ୟେକ ଗ୍ରାମ
+                                    ପଞ୍ଚାୟତରେ ପ୍ରାଥମିକ ସ୍ୱାସ୍ଥ୍ୟ କେନ୍ଦ୍ର ସ୍ଥାପନ
+                                    କର।</span>
+                                <span data-lang="hi" style="display:none">हर
+                                    ग्राम पंचायत में प्राथमिक स्वास्थ्य केंद्र
+                                    स्थापित करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Ban quack
+                                    doctors/healers.</span>
+                                <span data-lang="od"
+                                    style="display:none">ଝୋଲାଛାପ
+                                    ଡାକ୍ତର/ଉପଚାରକଙ୍କ ଉପରେ ସମ୍ପୂର୍ଣ୍ଣ
+                                    ନିଷେଧ।</span>
+                                <span data-lang="hi"
+                                    style="display:none">झोलाछाप
+                                    डॉक्टरों/उपचारकों पर पूर्ण प्रतिबंध।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Clean and safe drinking
+                                    water for every family.</span>
+                                <span data-lang="od"
+                                    style="display:none">ପ୍ରତ୍ୟେକ ପରିବାର/ଘରକୁ
+                                    ସ୍ୱଚ୍ଛ ଓ ନିରାପଦ ପାନୀୟ ଜଳ ସୁନିଶ୍ଚିତ
+                                    କର।</span>
+                                <span data-lang="hi" style="display:none">हर
+                                    परिवार/घर में स्वच्छ और सुरक्षित पेयजल
+                                    सुनिश्चित करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Ban alcohol and intoxicant
+                                    sales.</span>
+                                <span data-lang="od" style="display:none">ମଦ,
+                                    ଭାଙ୍ଗ ଓ ଅନ୍ୟ ମାଦକ ଦ୍ରବ୍ୟ ବିକ୍ରି ଉପରେ
+                                    ନିଷେଧ।</span>
+                                <span data-lang="hi" style="display:none">शराब,
+                                    भांग और अन्य नशीले पदार्थों की बिक्री पर
+                                    प्रतिबंध।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Fill all vacant health
+                                    department positions.</span>
+                                <span data-lang="od"
+                                    style="display:none">ସ୍ୱାସ୍ଥ୍ୟ ବିଭାଗର ସମସ୍ତ
+                                    ଖାଲି ପଦବୀ ପୂରଣ କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">स्वास्थ्य विभाग के सभी
+                                    रिक्त पद भरें।</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ── MINING & INDUSTRY Panel ── -->
+                    <div class="program-panel reveal" id="mining">
+                        <span class="panel-icon">⛏️</span>
+                        <h3>
+                            <span data-lang="en">Mining &amp; Industry</span>
+                            <span data-lang="od" style="display:none">ଖଣି ଓ
+                                ଶିଳ୍ପ</span>
+                            <span data-lang="hi" style="display:none">खनन एवं
+                                उद्योग</span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <span data-lang="en">90% reservation in Odisha's
+                                    mining sectors for Odia youth.</span>
+                                <span data-lang="od"
+                                    style="display:none">ଓଡ଼ିଶାର ଖଣି କ୍ଷେତ୍ରରେ
+                                    ଓଡ଼ିଆ ଯୁବକଙ୍କ ପାଇଁ ୯୦% ସଂରକ୍ଷଣ।</span>
+                                <span data-lang="hi" style="display:none">ओडिशा
+                                    के खनन क्षेत्रों में ओड़िया युवाओं के लिए
+                                    ९०% आरक्षण।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Form
+                                    "Odisha Mining Area Employment Board."</span>
+                                <span data-lang="od"
+                                    style="display:none">"ଓଡ଼ିଶା ମାଇନିଂ ଏରିଆ ଏମ୍ପ୍ଲୋୟମେଣ୍ଟ ବୋର୍ଡ"
+                                    ଗଠନ କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none"><strong>"ओडिशा माइनिंग एरिया एम्प्लॉयमेंट बोर्ड"</strong>
+                                    का गठन।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Priority to Odias in mining
+                                    business contracting.</span>
+                                <span data-lang="od" style="display:none">ଖଣି
+                                    ବ୍ୟବସାୟ ଠିକାଦାରୀ, ପରିବହନ ଓ ଅନ୍ୟ
+                                    କାର୍ଯ୍ୟକଳାପରେ ଓଡ଼ିଆ ଓ ଆଦିବାସୀଙ୍କୁ
+                                    ପ୍ରାଥମିକତା।</span>
+                                <span data-lang="hi" style="display:none">खनन
+                                    व्यवसाय के ठेकेदारी, परिवहन और अन्य
+                                    गतिविधियों में ओड़िया और आदिवासी लोगों को
+                                    प्राथमिकता।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Skills training for new
+                                    products.</span>
+                                <span data-lang="od" style="display:none">ନୂତନ
+                                    ଉତ୍ପାଦ ତିଆରି ପାଇଁ ଆବଶ୍ୟକ କୌଶଳ ପ୍ରଶିକ୍ଷଣ
+                                    ଦିଅ।</span>
+                                <span data-lang="hi" style="display:none">नए
+                                    उत्पादों के लिए आवश्यक कौशल प्रशिक्षण प्रदान
+                                    करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Support crafts and cottage
+                                    industries.</span>
+                                <span data-lang="od"
+                                    style="display:none">ହସ୍ତଶିଳ୍ପ ଓ କୁଟୀର
+                                    ଶିଳ୍ପକୁ ସମର୍ଥନ ଦିଅ।</span>
+                                <span data-lang="hi"
+                                    style="display:none">हस्तशिल्प और कुटीर
+                                    उद्योगों को समर्थन दें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Regulate small/medium-scale
+                                    industry education.</span>
+                                <span data-lang="od"
+                                    style="display:none">ଛୋଟ/ମଧ୍ୟମ ଶିଳ୍ପ ଶିକ୍ଷା,
+                                    ଉତ୍ପାଦ ବଜାର ଓ ବ୍ୟବସାୟ ବିକାଶକୁ ନିୟନ୍ତ୍ରଣ
+                                    କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">लघु/मध्यम-स्तरीय उद्योग
+                                    शिक्षा, उत्पाद बाजार और व्यवसाय विकास को
+                                    नियंत्रित करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Training schools for Mason,
+                                    Carpentry, Fish Processing, Mining
+                                    skills.</span>
+                                <span data-lang="od"
+                                    style="display:none">ରାଜମିସ୍ତ୍ରୀ, ଛୁଆଁ, ମାଛ
+                                    ପ୍ରସଂସ୍କରଣ, ଖଣି କୌଶଳ ପ୍ରଶିକ୍ଷଣ
+                                    ବିଦ୍ୟାଳୟ।</span>
+                                <span data-lang="hi" style="display:none">मेसन,
+                                    बढ़ईगिरी, मछली प्रसंस्करण, खनन कौशल
+                                    प्रशिक्षण विद्यालय।</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ── WOMEN Panel ── -->
+                    <div class="program-panel reveal" id="women">
+                        <span class="panel-icon">👩</span>
+                        <h3>
+                            <span data-lang="en">Women</span>
+                            <span data-lang="od" style="display:none">ମହିଳା ଓ
+                                ଯୁବ</span>
+                            <span data-lang="hi" style="display:none">महिला एवं
+                                युवा</span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <span data-lang="en">30 to 50% women
+                                    representation in all areas. 30% youth
+                                    representation.</span>
+                                <span data-lang="od" style="display:none">ସମସ୍ତ
+                                    କ୍ଷେତ୍ରରେ ୩୦ ରୁ ୫୦% ମହିଳା ପ୍ରତିନିଧିତ୍ୱ ଓ ୩୦%
+                                    ଯୁବ ପ୍ରତିନିଧିତ୍ୱ ସୁନିଶ୍ଚିତ।</span>
+                                <span data-lang="hi" style="display:none">सभी
+                                    क्षेत्रों में ३०-५०% महिला प्रतिनिधित्व और
+                                    ३०% युवा प्रतिनिधित्व।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">State and district-level
+                                    working committees.</span>
+                                <span data-lang="od" style="display:none">ରାଜ୍ୟ
+                                    ଓ ଜିଲ୍ଲା ସ୍ତରୀୟ କାର୍ଯ୍ୟକାରୀ ସମିତି ଗଠନ
+                                    କର।</span>
+                                <span data-lang="hi" style="display:none">राज्य
+                                    और जिला-स्तरीय कार्यकारी समितियाँ गठित
+                                    करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Separate departments for
+                                    various issues.</span>
+                                <span data-lang="od"
+                                    style="display:none">ବିଭିନ୍ନ ସମସ୍ୟା ଓ ବିଷୟ
+                                    ପାଇଁ ପୃଥକ ବିଭାଗ ଗଠନ କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">विभिन्न समस्याओं और
+                                    मुद्दों के लिए अलग विभाग बनाएं।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Adopt policy against
+                                    untouchability, casteism, gender
+                                    discrimination.</span>
+                                <span data-lang="od"
+                                    style="display:none">ଅସ୍ପୃଶ୍ୟତା, ଜାତିବାଦ,
+                                    ସାମ୍ପ୍ରଦାୟିକତା, ଲିଙ୍ଗ ଭେଦଭାବ ବିରୁଦ୍ଧରେ ନୀତି
+                                    ଗ୍ରହଣ କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">छुआछूत, जातिवाद,
+                                    सांप्रदायिकता, लिंग भेदभाव के विरुद्ध नीति
+                                    अपनाएं।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Priority to individual
+                                    freedom, self-respect, honesty.</span>
+                                <span data-lang="od"
+                                    style="display:none">ବ୍ୟକ୍ତିଗତ ସ୍ୱାଧୀନତା,
+                                    ଆତ୍ମସମ୍ମାନ, ସାମାଜିକ ସମ୍ମାନ ଓ ସତ୍ୟତାକୁ
+                                    ପ୍ରାଥମିକତା।</span>
+                                <span data-lang="hi"
+                                    style="display:none">व्यक्तिगत स्वतंत्रता,
+                                    आत्मसम्मान, ईमानदारी को प्राथमिकता।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Maximum priority to party
+                                    discipline.</span>
+                                <span data-lang="od" style="display:none">ଦଳୀୟ
+                                    ଶୃଙ୍ଖଳାକୁ ସର୍ବାଧିକ ପ୍ରାଥମିକତା।</span>
+                                <span data-lang="hi" style="display:none">पार्टी
+                                    अनुशासन को सर्वोच्च प्राथमिकता।</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ── SOCIAL REFORM Panel ── -->
+                    <div class="program-panel reveal" id="social">
+                        <span class="panel-icon">🕊️</span>
+                        <h3>
+                            <span data-lang="en">Social Reform</span>
+                            <span data-lang="od" style="display:none">ସାମାଜିକ
+                                ସଂସ୍କାର</span>
+                            <span data-lang="hi" style="display:none">सामाजिक
+                                सुधार</span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <span data-lang="en">End untouchability and
+                                    caste-based discrimination.</span>
+                                <span data-lang="od"
+                                    style="display:none">ଅସ୍ପୃଶ୍ୟତା ଓ ଜାତି
+                                    ଆଧାରିତ ଭେଦଭାବ ସମାପ୍ତ କର। ଜାତି ଆଧାରିତ ପ୍ରଥା
+                                    ବିରୁଦ୍ଧ କଡ଼ା ଆଇନଗତ କାର୍ଯ୍ୟାନୁଷ୍ଠାନ।</span>
+                                <span data-lang="hi" style="display:none">छुआछूत
+                                    और जाति-आधारित भेदभाव समाप्त करें।
+                                    जाति-आधारित प्रथाओं के विरुद्ध कड़ी कानूनी
+                                    कार्रवाई।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Equal respect to all
+                                    religions.</span>
+                                <span data-lang="od" style="display:none">ସମସ୍ତ
+                                    ଧର୍ମକୁ ସମାନ ସମ୍ମାନ ଓ ସୁଯୋଗ ପ୍ରଦାନ କର।</span>
+                                <span data-lang="hi" style="display:none">सभी
+                                    धर्मों को समान सम्मान और अवसर प्रदान
+                                    करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">No specific religious
+                                    prayer at schools and public places.</span>
+                                <span data-lang="od"
+                                    style="display:none">ବିଦ୍ୟାଳୟ, କାର୍ଯ୍ୟାଳୟ,
+                                    ବ୍ୟାଙ୍କ ଓ ସାର୍ବଜନୀନ ସ୍ଥାନରେ କୌଣସି
+                                    ନିର୍ଦ୍ଦିଷ୍ଟ ଧର୍ମର ପ୍ରାର୍ଥନା ବା ରୀତିନୀତି
+                                    ନୁହେଁ।</span>
+                                <span data-lang="hi"
+                                    style="display:none">स्कूलों, कार्यालयों,
+                                    बैंकों और सार्वजनिक स्थानों में किसी विशेष
+                                    धर्म की प्रार्थना या रीति-रिवाज़ अनिवार्य
+                                    नहीं।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Develop scientific,
+                                    rational thinking.</span>
+                                <span data-lang="od"
+                                    style="display:none">ବୈଜ୍ଞାନିକ, ଯୁକ୍ତିଯୁକ୍ତ
+                                    ଓ ପ୍ରମାଣ ଆଧାରିତ ଚିନ୍ତାଧାରା ବିକଶିତ କର।</span>
+                                <span data-lang="hi"
+                                    style="display:none">वैज्ञानिक, तर्कसंगत,
+                                    प्रमाण-आधारित सोच विकसित करें।</span>
+                            </li>
+                            <li>
+                                <span data-lang="en">Promote inter-community
+                                    harmony.</span>
+                                <span data-lang="od"
+                                    style="display:none">ଓଡ଼ିଶାରେ
+                                    ଅନ୍ତର-ସମ୍ପ୍ରଦାୟ ଓ ଅନ୍ତର-ଧାର୍ମିକ ସୌହାର୍ଦ୍ୟକୁ
+                                    ପ୍ରୋତ୍ସାହିତ କର।</span>
+                                <span data-lang="hi" style="display:none">ओडिशा
+                                    में अंतर-सामुदायिक और अंतर-धार्मिक सौहार्द
+                                    को बढ़ावा देना।</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ═══ JOIN CTA ═══ -->
+            <section class="join-cta">
+                <div class="container">
+                    <h2 class="reveal">
+                        <span data-lang="en">Be Part of the Change</span>
+                        <span data-lang="od" style="display:none">ପରିବର୍ତ୍ତନର
+                            ଅଂଶ ହୁଅ</span>
+                        <span data-lang="hi" style="display:none">बदलाव का
+                            हिस्सा बनें</span>
+                    </h2>
+                    <p class="reveal reveal-delay-1">
+                        <span data-lang="en">Join ABD and help build a just,
+                            equal Odisha.</span>
+                        <span data-lang="od" style="display:none">ABD ରେ ଯୋଗ ଦିଅ
+                            ଏବଂ ଏକ ନ୍ୟାୟ ଓ ସମ ଓଡ଼ିଶା ଗଢ଼ିତୋଳ।</span>
+                        <span data-lang="hi" style="display:none">ABD से जुड़ें
+                            और एक न्यायपूर्ण, समतामूलक ओडिशा बनाने में मदद
+                            करें।</span>
+                    </p>
+                    <a href="contact.html"
+                        class="btn btn-primary btn-lg reveal reveal-delay-2">
+                        <span data-lang="en">Join the Movement</span>
+                        <span data-lang="od" style="display:none">ଆନ୍ଦୋଳନରେ ଯୋଗ
+                            ଦିଅ</span>
+                        <span data-lang="hi" style="display:none">आंदोलन में
+                            शामिल हों</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ═══ FOOTER ═══ -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+
+                    <!-- Col 1: Brand -->
+                    <div class="footer-col">
+                        <div class="footer-brand">
+                            <img src="images/logo/abd-logo-white.png"
+                                alt="ABD Logo">
+                            <span class="footer-brand-name">
+                                <span data-lang="en">Amal Vikas Dal</span>
+                                <span data-lang="od" style="display:none">ଅମଳ
+                                    ବିକାଶ ଦଳ</span>
+                                <span data-lang="hi" style="display:none">अमल
+                                    विकास दल</span>
+                            </span>
+                        </div>
+                        <p>
+                            <span data-lang="en">Amal Vikas Dal (Odisha Bahujan
+                                Samya) —
+                                fighting for justice, equality, and real
+                                development for every
+                                citizen of Odisha.</span>
+                            <span data-lang="od" style="display:none">ଅମଳ ବିକାଶ
+                                ଦଳ (ଓଡ଼ିଶା
+                                ବହୁଜନ ସାମ୍ୟ) — ଓଡ଼ିଶାର ପ୍ରତ୍ୟେକ ନାଗରିକ ପାଇଁ
+                                ନ୍ୟାୟ, ସମତା ଓ ପ୍ରକୃତ
+                                ବିକାଶ ପାଇଁ ସଂଘର୍ଷ।</span>
+                            <span data-lang="hi" style="display:none">अमल विकास
+                                दल (ओडिशा
+                                बहुजन साम्य) — ओडिशा के हर नागरिक के लिए न्याय,
+                                समता और वास्तविक
+                                विकास के लिए संघर्षरत।</span>
+                        </p>
+                        <p class="footer-tagline">
+                            <span
+                                data-lang="en">"For Justice. For Equality. For Odisha."</span>
+                            <span data-lang="od"
+                                style="display:none">"ନ୍ୟାୟ ପାଇଁ। ସମତା ପାଇଁ। ଓଡ଼ିଶା ପାଇଁ।"</span>
+                            <span data-lang="hi"
+                                style="display:none">"न्याय के लिए। समता के लिए। ओडिशा के लिए।"</span>
+                        </p>
+                    </div>
+
+                    <!-- Col 2: Quick Links -->
+                    <div class="footer-col">
+                        <h4>
+                            <span data-lang="en">Quick Links</span>
+                            <span data-lang="od" style="display:none">ଦ୍ରୁତ
+                                ଲିଙ୍କ</span>
+                            <span data-lang="hi" style="display:none">त्वरित
+                                लिंक</span>
+                        </h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><span
+                                        data-lang="en">Home</span><span
+                                        data-lang="od"
+                                        style="display:none">ମୁଖ୍ୟ
+                                        ପୃଷ୍ଠା</span><span data-lang="hi"
+                                        style="display:none">मुख्य
+                                        पृष्ठ</span></a></li>
+                            <li><a href="about.html"><span
+                                        data-lang="en">About</span><span
+                                        data-lang="od" style="display:none">ଆମ
+                                        ବିଷୟ</span><span data-lang="hi"
+                                        style="display:none">हमारे बारे
+                                        में</span></a></li>
+                            <li><a href="manifesto.html"><span
+                                        data-lang="en">Manifesto</span><span
+                                        data-lang="od"
+                                        style="display:none">ଇସ୍ତାହାର</span><span
+                                        data-lang="hi"
+                                        style="display:none">घोषणापत्र</span></a></li>
+                            <li><a href="programs.html"><span
+                                        data-lang="en">Programs</span><span
+                                        data-lang="od"
+                                        style="display:none">କାର୍ଯ୍ୟସୂଚୀ</span><span
+                                        data-lang="hi"
+                                        style="display:none">कार्यक्रम</span></a></li>
+                            <li><a href="gallery.html"><span
+                                        data-lang="en">Gallery</span><span
+                                        data-lang="od"
+                                        style="display:none">ଗ୍ୟାଲେରୀ</span><span
+                                        data-lang="hi"
+                                        style="display:none">गैलरी</span></a></li>
+                            <li><a href="contact.html"><span
+                                        data-lang="en">Contact</span><span
+                                        data-lang="od"
+                                        style="display:none">ଯୋଗାଯୋଗ</span><span
+                                        data-lang="hi"
+                                        style="display:none">संपर्क</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Programs -->
+                    <div class="footer-col">
+                        <h4>
+                            <span data-lang="en">Programs</span>
+                            <span data-lang="od" style="display:none">କାର୍ଯ୍ୟ
+                                ସୂଚୀ</span>
+                            <span data-lang="hi"
+                                style="display:none">कार्यक्रम</span>
+                        </h4>
+                        <ul class="footer-links">
+                            <li><a href="programs.html#agriculture"><span
+                                        data-lang="en">Agriculture</span><span
+                                        data-lang="od"
+                                        style="display:none">କୃଷି</span><span
+                                        data-lang="hi"
+                                        style="display:none">कृषि</span></a></li>
+                            <li><a href="programs.html#land"><span
+                                        data-lang="en">Land Rights</span><span
+                                        data-lang="od"
+                                        style="display:none">ଭୂମି</span><span
+                                        data-lang="hi"
+                                        style="display:none">भूमि</span></a></li>
+                            <li><a href="programs.html#education"><span
+                                        data-lang="en">Education</span><span
+                                        data-lang="od"
+                                        style="display:none">ଶିକ୍ଷା</span><span
+                                        data-lang="hi"
+                                        style="display:none">शिक्षा</span></a></li>
+                            <li><a href="programs.html#health"><span
+                                        data-lang="en">Health</span><span
+                                        data-lang="od"
+                                        style="display:none">ସ୍ୱାସ୍ଥ୍ୟ</span><span
+                                        data-lang="hi"
+                                        style="display:none">स्वास्थ्य</span></a></li>
+                            <li><a href="programs.html#mining"><span
+                                        data-lang="en">Mining</span><span
+                                        data-lang="od"
+                                        style="display:none">ଖଣି</span><span
+                                        data-lang="hi"
+                                        style="display:none">खनन</span></a></li>
+                            <li><a href="programs.html#women"><span
+                                        data-lang="en">Women &amp;
+                                        Youth</span><span data-lang="od"
+                                        style="display:none">ମହିଳା ଓ
+                                        ଯୁବ</span><span data-lang="hi"
+                                        style="display:none">महिला एवं
+                                        युवा</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 4: Contact + Social -->
+                    <div class="footer-col">
+                        <h4>
+                            <span data-lang="en">Contact Us</span>
+                            <span data-lang="od"
+                                style="display:none">ଯୋଗାଯୋଗ</span>
+                            <span data-lang="hi" style="display:none">संपर्क
+                                करें</span>
+                        </h4>
+                        <div class="contact-info-item">
+                            <span class="icon">📍</span>
+                            <span>
+                                <span data-lang="en">Bhubaneswar, Odisha,
+                                    India</span>
+                                <span data-lang="od"
+                                    style="display:none">ଭୁବନେଶ୍ୱର, ଓଡ଼ିଶା,
+                                    ଭାରତ</span>
+                                <span data-lang="hi"
+                                    style="display:none">भुवनेश्वर, ओडिशा,
+                                    भारत</span>
+                            </span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="icon">✉️</span>
+                            <span>abdodisha@gmail.com</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="icon">📱</span>
+                            <span>
+                                <span data-lang="en">Contact via WhatsApp</span>
+                                <span data-lang="od"
+                                    style="display:none">ହ୍ୱାଟ୍ସଆପ ମାଧ୍ୟମରେ ଯୋଗ
+                                    ଦିଅ</span>
+                                <span data-lang="hi"
+                                    style="display:none">WhatsApp से संपर्क
+                                    करें</span>
+                            </span>
+                        </div>
+                        <div class="social-icons mt-3">
+                            <a href="#" class="social-icon"
+                                aria-label="WhatsApp">💬</a>
+                            <a href="#" class="social-icon"
+                                aria-label="Facebook">📘</a>
+                            <a href="#" class="social-icon"
+                                aria-label="YouTube">▶️</a>
+                            <a href="#" class="social-icon"
+                                aria-label="Twitter">🐦</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>
+                        <span data-lang="en">© 2024 Amal Vikas Dal (Odisha
+                            Bahujan Samya). All Rights Reserved.</span>
+                        <span data-lang="od" style="display:none">© ୨୦୨୪ ଅମଳ
+                            ବିକାଶ ଦଳ (ଓଡ଼ିଶା ବହୁଜନ ସାମ୍ୟ)। ସมସ୍ତ ଅଧିକାର
+                            ସଂରକ୍ଷିତ।</span>
+                        <span data-lang="hi" style="display:none">© २०२४ अमल
+                            विकास दल (ओडिशा बहुजन साम्य)। सर्वाधिकार
+                            सुरक्षित।</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ═══ FLOATING ELEMENTS ═══ -->
+        <a href="https://wa.me/" class="whatsapp-fab" target="_blank"
+            rel="noopener" aria-label="Chat with us on WhatsApp">
+            💬
+            <span class="tooltip">
+                <span data-lang="en">Chat with us</span>
+                <span data-lang="od" style="display:none">ଆମ ସହ କଥା ହୁଅ</span>
+                <span data-lang="hi" style="display:none">हमसे बात करें</span>
+            </span>
+        </a>
+        <button class="back-to-top" aria-label="Back to top">↑</button>
+
+        <!-- ═══ SCRIPTS ═══ -->
+        <script src="js/language.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+    // Tab switching
+    document.querySelectorAll('.program-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.program-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.program-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+    </body>
+</html>

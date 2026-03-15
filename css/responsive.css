@@ -1,0 +1,365 @@
+/* ═══════════════════════════════════════════
+   ABD — Amal Vikas Dal | responsive.css
+   ALL media queries — mobile / tablet / desktop
+   ═══════════════════════════════════════════ */
+
+/* ═══ DESKTOP (1024px+) ═══ */
+@media (min-width: 1024px) {
+    .hamburger {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+/* ═══ TABLET (768px – 1023px) ═══ */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Navbar */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .navbar {
+        height: 60px;
+    }
+
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* About snippet */
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    /* Carousel — 2 cards */
+    .mp-card {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    /* Pillars */
+    .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Programs grid */
+    .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        columns: 2;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Manifesto */
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Programs tabs */
+    .tab-panel ul {
+        grid-template-columns: 1fr;
+    }
+
+    /* Page banner */
+    .page-banner {
+        padding: 60px 0 40px;
+    }
+
+    /* Hero */
+    .hero {
+        height: 90vh;
+    }
+
+    /* Join CTA */
+    .join-cta {
+        padding: 60px 0;
+    }
+}
+
+/* ═══ MOBILE (max 767px) ═══ */
+@media (max-width: 767px) {
+
+    /* Typography */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Sections */
+    section {
+        padding: var(--section-pad-v-sm) 0;
+    }
+
+    /* Container */
+    .container,
+    .content-wrap {
+        padding: 0 16px;
+    }
+
+    /* Navbar */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .navbar {
+        height: 60px;
+    }
+
+    .nav-brand img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-brand-tagline {
+        display: none;
+    }
+
+    /* Hero */
+    .hero {
+        height: 90vh;
+        min-height: 500px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-tagline {
+        font-size: 0.95rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
+    /* About snippet */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    /* Carousel */
+    .mp-card {
+        flex: 0 0 100%;
+    }
+
+    .carousel-wrapper {
+        padding: 0 40px;
+    }
+
+    .mp-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Pillars */
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Programs */
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer {
+        padding: 40px 0 0;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        columns: 1;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Manifesto */
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Programs tabs */
+    .tab-panel ul {
+        grid-template-columns: 1fr;
+    }
+
+    .tab-bar {
+        padding-bottom: 4px;
+    }
+
+    /* Page banner */
+    .page-banner {
+        padding: 50px 0 35px;
+    }
+
+    .page-banner h1 {
+        font-size: 1.8rem;
+    }
+
+    /* About pledge */
+    .pledge-block {
+        padding: 28px 20px;
+    }
+
+    /* District table */
+    .district-table th,
+    .district-table td {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+
+    /* Join CTA */
+    .join-cta {
+        padding: 48px 0;
+    }
+
+    /* Floating */
+    .whatsapp-fab {
+        width: 52px;
+        height: 52px;
+        font-size: 1.3rem;
+    }
+
+    .back-to-top {
+        width: 42px;
+        height: 42px;
+    }
+
+    /* Section heading */
+    .section-heading {
+        font-size: 1.6rem;
+    }
+
+    /* Tab panel header */
+    .tab-panel-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Org chart */
+    .org-level {
+        gap: 10px;
+    }
+
+    .org-box {
+        min-width: 160px;
+        padding: 12px 16px;
+    }
+
+    /* About problem */
+    .about-who-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .about-who-image {
+        order: -1;
+    }
+}
+
+/* ═══ VERY SMALL (max 380px) ═══ */
+@media (max-width: 380px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .mp-photo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* ═══ ENSURE NO HORIZONTAL SCROLL ═══ */
+@media (max-width: 1023px) {
+    .carousel-track {
+        gap: 12px;
+    }
+}

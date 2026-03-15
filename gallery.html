@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Gallery — Amal Vikas Dal (ABD). Photos from party events, rallies, leadership meets and district activities across Odisha.">
+        <title>Gallery — Amal Vikas Dal | Odisha Bahujan Samya</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Noto+Serif+Odia:wght@400;600&family=Tiro+Devanagari+Hindi&family=Lora:wght@600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/components.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <style>
+    /* ── PAGE BANNER ── */
+    .page-banner {
+      background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 60%, #1A237E 100%);
+      padding: 100px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .page-banner-content {
+      position: relative;
+      z-index: 1;
+    }
+    .page-banner-overline {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #FFD700;
+      margin-bottom: 1rem;
+      font-family: 'Lora', serif;
+    }
+    .page-banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 0.75rem;
+      line-height: 1.2;
+    }
+    .page-banner-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+      font-family: 'Lora', serif;
+    }
+    .breadcrumb {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .breadcrumb a { color: #FFD700; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { color: rgba(255,255,255,0.4); }
+
+    /* ── FILTER TABS ── */
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .filter-btn {
+      padding: 10px 24px;
+      border-radius: 30px;
+      border: 2px solid #2E7D32;
+      background: transparent;
+      color: #2E7D32;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: #2E7D32;
+      color: #fff;
+    }
+
+    /* ── GALLERY GRID ── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-item.hidden {
+      display: none;
+    }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85vh;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+      position: absolute;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2.5rem;
+      cursor: pointer;
+      z-index: 10;
+      padding: 10px;
+    }
+    .lightbox-close { top: 20px; right: 24px; }
+    .lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+    .lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
+
+    /* ── GALLERY NOTE ── */
+    .gallery-note {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background: #F9F7F2;
+      border-radius: 12px;
+      color: #666;
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1023px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 767px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .page-banner h1 { font-size: 2rem; }
+    }
+  </style>
+    </head>
+    <body>
+
+        <!-- ═══ NAVBAR ═══ -->
+        <header>
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <div class="container">
+                    <!-- Brand -->
+                    <a href="index.html" class="nav-brand">
+                        <img src="images/logo/abd-logo-white.png"
+                            alt="ABD Logo">
+                        <div class="nav-brand-text">
+                            <span class="nav-brand-name">
+                                <span data-lang="en">Amal Vikas Dal</span>
+                                <span data-lang="od" style="display:none">ଅମଳ
+                                    ବିକାଶ ଦଳ</span>
+                                <span data-lang="hi" style="display:none">अमल
+                                    विकास दल</span>
+                            </span>
+                            <span class="nav-brand-tagline">
+                                <span data-lang="en">Odisha Bahujan Samya</span>
+                                <span data-lang="od" style="display:none">ଓଡ଼ିଶା
+                                    ବହୁଜନ
+                                    ସାମ୍ୟ</span>
+                                <span data-lang="hi" style="display:none">ओडिशा
+                                    बहुजन
+                                    साम्य</span>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Nav Links -->
+                    <ul class="nav-links">
+                        <li><a href="index.html">
+                                <span data-lang="en">Home</span>
+                                <span data-lang="od" style="display:none">ମୁଖ୍ୟ
+                                    ପୃଷ୍ଠା</span>
+                                <span data-lang="hi" style="display:none">मुख्य
+                                    पृष्ठ</span>
+                            </a></li>
+                        <li><a href="about.html">
+                                <span data-lang="en">About</span>
+                                <span data-lang="od" style="display:none">ଆମ
+                                    ବିଷୟ</span>
+                                <span data-lang="hi" style="display:none">हमारे
+                                    बारे में</span>
+                            </a></li>
+                        <li><a href="manifesto.html">
+                                <span data-lang="en">Manifesto</span>
+                                <span data-lang="od"
+                                    style="display:none">ଇସ୍ତାହାର</span>
+                                <span data-lang="hi"
+                                    style="display:none">घोषणापत्र</span>
+                            </a></li>
+                        <li><a href="programs.html">
+                                <span data-lang="en">Programs</span>
+                                <span data-lang="od"
+                                    style="display:none">କାର୍ଯ୍ୟସୂଚୀ</span>
+                                <span data-lang="hi"
+                                    style="display:none">कार्यक्रम</span>
+                            </a></li>
+                        <li><a href="gallery.html" class="active">
+                                <span data-lang="en">Gallery</span>
+                                <span data-lang="od"
+                                    style="display:none">ଗ୍ୟାଲେରୀ</span>
+                                <span data-lang="hi"
+                                    style="display:none">गैलरी</span>
+                            </a></li>
+                        <li><a href="contact.html">
+                                <span data-lang="en">Contact</span>
+                                <span data-lang="od"
+                                    style="display:none">ଯୋଗାଯୋଗ</span>
+                                <span data-lang="hi"
+                                    style="display:none">संपर्क</span>
+                            </a></li>
+                    </ul>
+
+                    <!-- Right: Language toggle + Join Us -->
+                    <div class="nav-right">
+                        <div class="lang-toggle">
+                            <button class="lang-btn active" data-lang="en"
+                                aria-label="Switch to English">EN</button>
+                            <button class="lang-btn" data-lang="od"
+                                aria-label="Switch to Odia">ଓଡ଼</button>
+                            <button class="lang-btn" data-lang="hi"
+                                aria-label="Switch to Hindi">हि</button>
+                        </div>
+                        <a href="contact.html" class="btn-join">
+                            <span data-lang="en">Join Us</span>
+                            <span data-lang="od" style="display:none">ଯୋଗ
+                                ଦିଅ</span>
+                            <span data-lang="hi"
+                                style="display:none">जुड़ें</span>
+                        </a>
+                    </div>
+
+                    <!-- Hamburger -->
+                    <button class="hamburger" aria-label="Open menu"
+                        aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Mobile Full-Screen Menu -->
+            <div class="mobile-menu" role="dialog" aria-modal="true"
+                aria-label="Mobile navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">
+                            <span data-lang="en">Home</span>
+                            <span data-lang="od" style="display:none">ମୁଖ୍ୟ
+                                ପୃଷ୍ଠା</span>
+                            <span data-lang="hi" style="display:none">मुख्य
+                                पृष्ठ</span>
+                        </a></li>
+                    <li><a href="about.html">
+                            <span data-lang="en">About</span>
+                            <span data-lang="od" style="display:none">ଆମ
+                                ବିଷୟ</span>
+                            <span data-lang="hi" style="display:none">हमारे बारे
+                                में</span>
+                        </a></li>
+                    <li><a href="manifesto.html">
+                            <span data-lang="en">Manifesto</span>
+                            <span data-lang="od"
+                                style="display:none">ଇସ୍ତାହାର</span>
+                            <span data-lang="hi"
+                                style="display:none">घोषणापत्र</span>
+                        </a></li>
+                    <li><a href="programs.html">
+                            <span data-lang="en">Programs</span>
+                            <span data-lang="od"
+                                style="display:none">କାର୍ଯ୍ୟସୂଚୀ</span>
+                            <span data-lang="hi"
+                                style="display:none">कार्यक्रम</span>
+                        </a></li>
+                    <li><a href="gallery.html">
+                            <span data-lang="en">Gallery</span>
+                            <span data-lang="od"
+                                style="display:none">ଗ୍ୟାଲେରୀ</span>
+                            <span data-lang="hi"
+                                style="display:none">गैलरी</span>
+                        </a></li>
+                    <li><a href="contact.html">
+                            <span data-lang="en">Contact</span>
+                            <span data-lang="od"
+                                style="display:none">ଯୋଗାଯୋଗ</span>
+                            <span data-lang="hi"
+                                style="display:none">संपर्क</span>
+                        </a></li>
+                </ul>
+                <div class="mobile-lang-row">
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="od">ଓଡ଼</button>
+                    <button class="lang-btn" data-lang="hi">हि</button>
+                </div>
+                <a href="contact.html" class="btn btn-primary mobile-join">
+                    <span data-lang="en">Join the Movement</span>
+                    <span data-lang="od" style="display:none">ଆନ୍ଦୋଳନରେ ଯୋଗ
+                        ଦିଅ</span>
+                    <span data-lang="hi" style="display:none">आंदोलन में शामिल
+                        हों</span>
+                </a>
+                <button class="mobile-close" aria-label="Close menu"
+                    style="position:absolute;top:20px;right:20px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;">✕</button>
+            </div>
+        </header>
+
+        <main>
+
+            <!-- ═══ PAGE BANNER ═══ -->
+            <section class="page-banner">
+                <div class="container">
+                    <div class="page-banner-content">
+                        <div class="breadcrumb">
+                            <a href="index.html"><span
+                                    data-lang="en">Home</span><span
+                                    data-lang="od" style="display:none">ମୁଖ୍ୟ
+                                    ପୃଷ୍ଠା</span><span data-lang="hi"
+                                    style="display:none">मुख्य पृष্ठ</span></a>
+                            <span>›</span>
+                            <span data-lang="en">Gallery</span><span
+                                data-lang="od"
+                                style="display:none">ଗ୍ୟାଲେରୀ</span><span
+                                data-lang="hi" style="display:none">गैलरी</span>
+                        </div>
+                        <h1>
+                            <span data-lang="en">Gallery</span>
+                            <span data-lang="od"
+                                style="display:none">ଗ୍ୟାଲେରୀ</span>
+                            <span data-lang="hi"
+                                style="display:none">गैलरी</span>
+                        </h1>
+                        <p class="page-banner-subtitle">
+                            <span data-lang="en">Moments from our journey across
+                                Odisha</span>
+                            <span data-lang="od" style="display:none">ଓଡ଼ିଶା
+                                ଯାତ୍ରାର ମୁହୂର୍ତ୍ତ</span>
+                            <span data-lang="hi" style="display:none">ओडिशा
+                                यात्रा के पल</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ GALLERY SECTION ═══ -->
+            <section class="section" style="padding: 80px 0;">
+                <div class="container">
+
+                    <!-- Filter Tabs -->
+                    <div class="filter-tabs reveal">
+                        <button class="filter-btn active" data-filter="all">
+                            <span data-lang="en">All</span>
+                            <span data-lang="od"
+                                style="display:none">ସମସ୍ତ</span>
+                            <span data-lang="hi" style="display:none">सभी</span>
+                        </button>
+                        <button class="filter-btn" data-filter="events">
+                            <span data-lang="en">Party Events</span>
+                            <span data-lang="od" style="display:none">ଦଳ
+                                କାର୍ଯ୍ୟକ୍ରମ</span>
+                            <span data-lang="hi" style="display:none">पार्टी
+                                कार्यक्रम</span>
+                        </button>
+                        <button class="filter-btn" data-filter="leaders">
+                            <span data-lang="en">Leaders</span>
+                            <span data-lang="od"
+                                style="display:none">ନେତୃତ୍ୱ</span>
+                            <span data-lang="hi"
+                                style="display:none">नेतृत्व</span>
+                        </button>
+                        <button class="filter-btn" data-filter="rallies">
+                            <span data-lang="en">Rallies</span>
+                            <span data-lang="od" style="display:none">ସଭା ଓ
+                                ର୍ୟାଲୀ</span>
+                            <span data-lang="hi"
+                                style="display:none">रैली</span>
+                        </button>
+                        <button class="filter-btn" data-filter="districts">
+                            <span data-lang="en">District Activities</span>
+                            <span data-lang="od" style="display:none">ଜିଲ୍ଲା
+                                ଗତିବିଧି</span>
+                            <span data-lang="hi" style="display:none">जिला
+                                गतिविधियाँ</span>
+                        </button>
+                    </div>
+
+                    <!-- Photo Grid -->
+                    <div class="gallery-grid reveal">
+                        <div class="gallery-item" data-category="events">
+                            <img src="https://picsum.photos/400/300?random=1"
+                                alt="Party Event 1" loading="lazy">
+                        </div>
+                        <div class="gallery-item" data-category="leaders">
+                            <img src="https://picsum.photos/400/300?random=2"
+                                alt="Party Leader 1" loading="lazy">
+                        </div>
+                        <div class="gallery-item" data-category="rallies">
+                            <img src="https://picsum.photos/400/300?random=3"
+                                alt="Rally 1" loading="lazy">
+                        </div>
+                        <div class="gallery-item" data-category="districts">
+                            <img src="https://picsum.photos/400/300?random=4"
+                                alt="District Activity 1" loading="lazy">
+                        </div>
+                        <div class="gallery-item" data-category="events">
+                            <img src="https://picsum.photos/400/300?random=5"
+                                alt="Party Event 2" loading="lazy">
+                        </div>
+                        <div class="gallery-item" data-category="leaders">
+                            <img src="https://picsum.photos/400/300?random=6"
+                                alt="Party Leader 2" loading="lazy">
+                        </div>
+                        <div class="gallery-item" data-category="rallies">
+                            <img src="https://picsum.photos/400/300?random=7"
+                                alt="Rally 2" loading="lazy">
+                        </div>
+                        <div class="gallery-item" data-category="districts">
+                            <img src="https://picsum.photos/400/300?random=8"
+                                alt="District Activity 2" loading="lazy">
+                        </div>
+                        <div class="gallery-item" data-category="events">
+                            <img src="https://picsum.photos/400/300?random=9"
+                                alt="Party Event 3" loading="lazy">
+                        </div>
+                        <div class="gallery-item" data-category="leaders">
+                            <img src="https://picsum.photos/400/300?random=10"
+                                alt="Party Leader 3" loading="lazy">
+                        </div>
+                        <div class="gallery-item" data-category="rallies">
+                            <img src="https://picsum.photos/400/300?random=11"
+                                alt="Rally 3" loading="lazy">
+                        </div>
+                        <div class="gallery-item" data-category="districts">
+                            <img src="https://picsum.photos/400/300?random=12"
+                                alt="District Activity 3" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Note -->
+                    <div class="gallery-note reveal">
+                        <span data-lang="en">Add photos here by placing image
+                            files in the /images/gallery/ folder.</span>
+                        <span data-lang="od"
+                            style="display:none">/images/gallery/ ଫୋଲ୍ଡରରେ ଫଟୋ
+                            ରଖି ଏଠାରେ ଯୋଡ଼ନ୍ତୁ।</span>
+                        <span data-lang="hi"
+                            style="display:none">/images/gallery/ फ़ोल्डर में
+                            फ़ोटो रखकर यहाँ जोड़ें।</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ═══ JOIN CTA ═══ -->
+            <section class="join-cta">
+                <div class="container">
+                    <h2 class="reveal">
+                        <span data-lang="en">Be Part of the Change</span>
+                        <span data-lang="od" style="display:none">ପରିବର୍ତନର ଅଂଶ
+                            ହୁଅ</span>
+                        <span data-lang="hi" style="display:none">बदलाव का
+                            हिस्सा बनें</span>
+                    </h2>
+                    <p class="reveal reveal-delay-1">
+                        <span data-lang="en">Join ABD and help build a just,
+                            equal Odisha.</span>
+                        <span data-lang="od" style="display:none">ABD ରେ ଯୋଗ ଦିଅ
+                            ଏବଂ ଏକ ନ୍ୟାୟ ଓ ସମ ଓଡ଼ିଶା ଗଢ଼ିତୋଳ।</span>
+                        <span data-lang="hi" style="display:none">ABD से जुड़ें
+                            और एक न्यायपूर्ण, समतामूलक ओडिशा बनाने में मदद
+                            करें।</span>
+                    </p>
+                    <a href="contact.html"
+                        class="btn btn-primary btn-lg reveal reveal-delay-2">
+                        <span data-lang="en">Join the Movement</span>
+                        <span data-lang="od" style="display:none">ଆନ୍ଦୋଳନରେ ଯୋଗ
+                            ଦିଅ</span>
+                        <span data-lang="hi" style="display:none">आंदोलन में
+                            शामिल हों</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ═══ LIGHTBOX ═══ -->
+        <div class="lightbox" role="dialog" aria-modal="true"
+            aria-label="Image lightbox">
+            <button class="lightbox-close"
+                aria-label="Close lightbox">✕</button>
+            <button class="lightbox-prev" aria-label="Previous image">❮</button>
+            <img src alt>
+            <button class="lightbox-next" aria-label="Next image">❯</button>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+
+                    <!-- Col 1: Brand -->
+                    <div class="footer-col">
+                        <div class="footer-brand">
+                            <img src="images/logo/abd-logo-white.png"
+                                alt="ABD Logo">
+                            <span class="footer-brand-name">
+                                <span data-lang="en">Amal Vikas Dal</span>
+                                <span data-lang="od" style="display:none">ଅମଳ
+                                    ବିକାଶ ଦଳ</span>
+                                <span data-lang="hi" style="display:none">अमल
+                                    विकास दल</span>
+                            </span>
+                        </div>
+                        <p>
+                            <span data-lang="en">Amal Vikas Dal (Odisha Bahujan
+                                Samya) —
+                                fighting for justice, equality, and real
+                                development for every
+                                citizen of Odisha.</span>
+                            <span data-lang="od" style="display:none">ଅମଳ ବିକାଶ
+                                ଦଳ (ଓଡ଼ିଶା
+                                ବହୁଜନ ସାମ୍ୟ) — ଓଡ଼ିଶାର ପ୍ରତ୍ୟେକ ନାଗରିକ ପାଇଁ
+                                ନ୍ୟାୟ, ସମତା ଓ ପ୍ରକୃତ
+                                ବିକାଶ ପାଇଁ ସଂଘର୍ଷ।</span>
+                            <span data-lang="hi" style="display:none">अमल विकास
+                                दल (ओडिशा
+                                बहुजन साम्य) — ओडिशा के हर नागरिक के लिए न्याय,
+                                समता और वास्तविक
+                                विकास के लिए संघर्षरत।</span>
+                        </p>
+                        <p class="footer-tagline">
+                            <span
+                                data-lang="en">"For Justice. For Equality. For Odisha."</span>
+                            <span data-lang="od"
+                                style="display:none">"ନ୍ୟାୟ ପାଇଁ। ସମତା ପାଇଁ। ଓଡ଼ିଶା ପାଇଁ।"</span>
+                            <span data-lang="hi"
+                                style="display:none">"न्याय के लिए। समता के लिए। ओडिशा के लिए।"</span>
+                        </p>
+                    </div>
+
+                    <!-- Col 2: Quick Links -->
+                    <div class="footer-col">
+                        <h4>
+                            <span data-lang="en">Quick Links</span>
+                            <span data-lang="od" style="display:none">ଦ୍ରୁତ
+                                ଲିଙ୍କ</span>
+                            <span data-lang="hi" style="display:none">त्वरित
+                                लिंक</span>
+                        </h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><span
+                                        data-lang="en">Home</span><span
+                                        data-lang="od"
+                                        style="display:none">ମୁଖ୍ୟ
+                                        ପୃଷ୍ଠା</span><span
+                                        data-lang="hi"
+                                        style="display:none">मुख्य
+                                        पृष्ठ</span></a></li>
+                            <li><a href="about.html"><span
+                                        data-lang="en">About</span><span
+                                        data-lang="od" style="display:none">ଆମ
+                                        ବିଷୟ</span><span
+                                        data-lang="hi"
+                                        style="display:none">हमारे बारे
+                                        में</span></a></li>
+                            <li><a href="manifesto.html"><span
+                                        data-lang="en">Manifesto</span><span
+                                        data-lang="od"
+                                        style="display:none">ଇସ୍ତାହାର</span><span
+                                        data-lang="hi"
+                                        style="display:none">घोषणापत्र</span></a></li>
+                            <li><a href="programs.html"><span
+                                        data-lang="en">Programs</span><span
+                                        data-lang="od"
+                                        style="display:none">କାର୍ଯ୍ୟସୂଚୀ</span><span
+                                        data-lang="hi"
+                                        style="display:none">कार्यक्रम</span></a></li>
+                            <li><a href="gallery.html"><span
+                                        data-lang="en">Gallery</span><span
+                                        data-lang="od"
+                                        style="display:none">ଗ୍ୟାଲେରୀ</span><span
+                                        data-lang="hi"
+                                        style="display:none">गैलरी</span></a></li>
+                            <li><a href="contact.html"><span
+                                        data-lang="en">Contact</span><span
+                                        data-lang="od"
+                                        style="display:none">ଯୋଗାଯୋଗ</span><span
+                                        data-lang="hi"
+                                        style="display:none">संपर्क</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Programs -->
+                    <div class="footer-col">
+                        <h4>
+                            <span data-lang="en">Programs</span>
+                            <span data-lang="od" style="display:none">କାର୍ଯ୍ୟ
+                                ସୂଚୀ</span>
+                            <span data-lang="hi"
+                                style="display:none">कार्यक्रम</span>
+                        </h4>
+                        <ul class="footer-links">
+                            <li><a href="programs.html#agriculture"><span
+                                        data-lang="en">Agriculture</span><span
+                                        data-lang="od"
+                                        style="display:none">କୃଷି</span><span
+                                        data-lang="hi"
+                                        style="display:none">कृषि</span></a></li>
+                            <li><a href="programs.html#land"><span
+                                        data-lang="en">Land
+                                        Rights</span><span data-lang="od"
+                                        style="display:none">ଭୂମି</span><span
+                                        data-lang="hi"
+                                        style="display:none">भूमि</span></a></li>
+                            <li><a href="programs.html#education"><span
+                                        data-lang="en">Education</span><span
+                                        data-lang="od"
+                                        style="display:none">ଶିକ୍ଷା</span><span
+                                        data-lang="hi"
+                                        style="display:none">शिक्षा</span></a></li>
+                            <li><a href="programs.html#health"><span
+                                        data-lang="en">Health</span><span
+                                        data-lang="od"
+                                        style="display:none">ସ୍ୱାସ୍ଥ୍ୟ</span><span
+                                        data-lang="hi"
+                                        style="display:none">स्वास्थ्य</span></a></li>
+                            <li><a href="programs.html#mining"><span
+                                        data-lang="en">Mining</span><span
+                                        data-lang="od"
+                                        style="display:none">ଖଣି</span><span
+                                        data-lang="hi"
+                                        style="display:none">खनन</span></a></li>
+                            <li><a href="programs.html#women"><span
+                                        data-lang="en">Women &amp;
+                                        Youth</span><span data-lang="od"
+                                        style="display:none">ମହିଳା
+                                        ଓ ଯୁବ</span><span data-lang="hi"
+                                        style="display:none">महिला
+                                        एवं युवा</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 4: Contact + Social -->
+                    <div class="footer-col">
+                        <h4>
+                            <span data-lang="en">Contact Us</span>
+                            <span data-lang="od"
+                                style="display:none">ଯୋଗାଯୋଗ</span>
+                            <span data-lang="hi" style="display:none">संपर्क
+                                करें</span>
+                        </h4>
+                        <div class="contact-info-item">
+                            <span class="icon">📍</span>
+                            <span>
+                                <span data-lang="en">Bhubaneswar, Odisha,
+                                    India</span>
+                                <span data-lang="od"
+                                    style="display:none">ଭୁବନେଶ୍ୱର, ଓଡ଼ିଶା,
+                                    ଭାରତ</span>
+                                <span data-lang="hi"
+                                    style="display:none">भुवनेश्वर, ओडिशा,
+                                    भारत</span>
+                            </span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="icon">✉️</span>
+                            <span>abdodisha@gmail.com</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="icon">📱</span>
+                            <span>
+                                <span data-lang="en">Contact via WhatsApp</span>
+                                <span data-lang="od"
+                                    style="display:none">ହ୍ୱାଟ୍ସଆପ ମାଧ୍ୟମରେ ଯୋଗ
+                                    ଦିଅ</span>
+                                <span data-lang="hi"
+                                    style="display:none">WhatsApp से संपर्क
+                                    करें</span>
+                            </span>
+                        </div>
+                        <div class="social-icons mt-3">
+                            <a href="#" class="social-icon"
+                                aria-label="WhatsApp">💬</a>
+                            <a href="#" class="social-icon"
+                                aria-label="Facebook">📘</a>
+                            <a href="#" class="social-icon"
+                                aria-label="YouTube">▶️</a>
+                            <a href="#" class="social-icon"
+                                aria-label="Twitter">🐦</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>
+                        <span data-lang="en">© 2024 Amal Vikas Dal (Odisha
+                            Bahujan Samya).
+                            All Rights Reserved.</span>
+                        <span data-lang="od" style="display:none">© ୨୦୨୪ ଅମଳ
+                            ବିକାଶ ଦଳ
+                            (ଓଡ଼ିଶା ବହୁଜନ ସାମ୍ୟ)। ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ।</span>
+                        <span data-lang="hi" style="display:none">© २०२४ अमल
+                            विकास दल (ओडिशा
+                            बहुजन साम्य)। सर्वाधिकार सुरक्षित।</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ═══ FLOATING ELEMENTS ═══ -->
+        <a href="https://wa.me/" class="whatsapp-fab" target="_blank"
+            rel="noopener"
+            aria-label="Chat with us on WhatsApp">
+            💬
+            <span class="tooltip">
+                <span data-lang="en">Chat with us</span>
+                <span data-lang="od" style="display:none">ଆମ ସହ କଥା ହୁଅ</span>
+                <span data-lang="hi" style="display:none">हमसे बात करें</span>
+            </span>
+        </a>
+        <button class="back-to-top" aria-label="Back to top">↑</button>
+
+        <!-- ═══ SCRIPTS ═══ -->
+        <script src="js/language.js"></script>
+        <script src="js/gallery.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

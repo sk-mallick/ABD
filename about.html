@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Amal Vikas Dal (ABD) — Odisha Bahujan Samya. Learn about our vision, mission, history and organisational structure.">
+  <title>About ABD — Amal Vikas Dal | Odisha Bahujan Samya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Noto+Serif+Odia:wght@400;600&family=Tiro+Devanagari+Hindi&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    /* ── PAGE BANNER ── */
+    .page-banner {
+      background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 60%, #1A237E 100%);
+      padding: 100px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .page-banner-content {
+      position: relative;
+      z-index: 1;
+    }
+    .page-banner-overline {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #FFD700;
+      margin-bottom: 1rem;
+      font-family: 'Lora', serif;
+    }
+    .page-banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 0.75rem;
+      line-height: 1.2;
+    }
+    .page-banner-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+      font-family: 'Lora', serif;
+    }
+    .breadcrumb {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .breadcrumb a { color: #FFD700; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { color: rgba(255,255,255,0.4); }
+
+    /* ── WHY ODISHA NEEDS ABD ── */
+    .why-abd {
+      background: #ffffff;
+      padding: 80px 0;
+    }
+    .why-abd-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .why-abd h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #1B5E20;
+      margin-bottom: 1.5rem;
+    }
+    .why-abd p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #424242;
+      margin-bottom: 1.25rem;
+    }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin: 2.5rem 0;
+    }
+    .problem-item {
+      background: #F9F7F2;
+      border-left: 4px solid #B71C1C;
+      border-radius: 0 10px 10px 0;
+      padding: 18px 20px;
+    }
+    .problem-item h4 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      color: #1B5E20;
+      margin: 0 0 0.4rem;
+    }
+    .problem-item p {
+      font-size: 0.9rem;
+      margin: 0;
+      color: #555;
+      line-height: 1.6;
+    }
+    .existing-failures {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 2rem 0;
+    }
+    .existing-failures h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.2rem;
+      color: #E65100;
+      margin-bottom: 1rem;
+    }
+    .existing-failures ul {
+      padding-left: 1.4rem;
+      margin: 0;
+    }
+    .existing-failures ul li {
+      font-size: 0.95rem;
+      color: #424242;
+      line-height: 1.7;
+      margin-bottom: 0.4rem;
+    }
+
+    /* ── TIMELINE / HISTORY ── */
+    .history-section {
+      background: #F9F7F2;
+      padding: 80px 0;
+    }
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 3rem auto 0;
+      padding: 0 24px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, #1B5E20, #1A237E);
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: calc(50% + 40px);
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    .timeline-item:nth-child(even) {
+      justify-content: flex-start;
+      padding-right: 0;
+      padding-left: calc(50% + 40px);
+    }
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      top: 20px;
+      width: 18px;
+      height: 18px;
+      background: #FFD700;
+      border: 3px solid #1B5E20;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    .timeline-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      border-top: 4px solid #1B5E20;
+      max-width: 380px;
+      width: 100%;
+    }
+    .timeline-item:nth-child(even) .timeline-card {
+      border-top-color: #1A237E;
+    }
+    .timeline-year {
+      display: inline-block;
+      background: #1B5E20;
+      color: #FFD700;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 0.75rem;
+    }
+    .timeline-item:nth-child(even) .timeline-year {
+      background: #1A237E;
+    }
+    .timeline-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      color: #1A1A1A;
+      margin: 0 0 0.6rem;
+    }
+    .timeline-card p {
+      font-size: 0.92rem;
+      color: #555;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ── PARTY FLAG ── */
+    .flag-section {
+      background: #ffffff;
+      padding: 80px 0;
+    }
+    .flag-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .flag-image-box {
+      text-align: center;
+    }
+    .flag-image-box img {
+      max-width: 340px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+    .flag-placeholder {
+      max-width: 340px;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+    }
+    .flag-stripe {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .flag-stripe-blue  { background: #1565C0; }
+    .flag-stripe-white { background: #ffffff; border: 1px solid #eee; }
+    .flag-stripe-red   { background: #B71C1C; }
+    .flag-stripe span  { font-size: 2rem; }
+    .flag-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #1B5E20;
+      margin-bottom: 1.25rem;
+    }
+    .flag-colors {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 1.5rem 0;
+    }
+    .flag-color-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .flag-swatch {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .flag-color-item-text h4 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      margin: 0 0 0.25rem;
+      color: #1A1A1A;
+    }
+    .flag-color-item-text p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .flag-symbols {
+      margin-top: 1.5rem;
+      padding: 16px 20px;
+      background: #F9F7F2;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      color: #424242;
+      line-height: 1.7;
+    }
+
+    /* ── PRATIBADHATA / PLEDGES ── */
+    .pledges-section {
+      background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);
+      padding: 80px 0;
+    }
+    .pledges-section .section-heading {
+      color: #ffffff;
+    }
+    .pledges-section .section-subheading {
+      color: rgba(255,255,255,0.8);
+    }
+    .pledges-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 3rem;
+    }
+    .pledge-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .pledge-card:hover {
+      background: rgba(255,255,255,0.18);
+      transform: translateY(-4px);
+    }
+    .pledge-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: #FFD700;
+      color: #1B5E20;
+      font-weight: 800;
+      font-size: 1rem;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .pledge-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      color: #ffffff;
+      margin: 0 0 0.6rem;
+    }
+    .pledge-card p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ── WORKING TERRITORY ── */
+    .territory-section {
+      background: #F9F7F2;
+      padding: 80px 0;
+    }
+    .territory-intro {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3rem;
+      padding: 0 24px;
+    }
+    .territory-intro p {
+      font-size: 1.05rem;
+      color: #424242;
+      line-height: 1.8;
+    }
+    .district-highlight {
+      background: linear-gradient(135deg, #1B5E20, #1A237E);
+      color: #fff;
+      text-align: center;
+      border-radius: 16px;
+      padding: 48px 32px;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+    .district-highlight .big-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      font-weight: 800;
+      color: #FFD700;
+      line-height: 1;
+    }
+    .district-highlight p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.9);
+      margin: 0.75rem 0 0;
+    }
+    .org-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .org-stat-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      border-bottom: 4px solid #1B5E20;
+    }
+    .org-stat-card .org-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #1B5E20;
+    }
+    .org-stat-card p {
+      font-size: 0.85rem;
+      color: #757575;
+      margin: 0.4rem 0 0;
+      line-height: 1.5;
+    }
+
+    /* ── JOIN CTA ── */
+    .join-cta {
+      background: linear-gradient(135deg, #FF6F00 0%, #E65100 100%);
+      padding: 72px 0;
+      text-align: center;
+    }
+    .join-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+    .join-cta p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .join-cta .btn-white {
+      background: #ffffff;
+      color: #E65100;
+      padding: 16px 40px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    .join-cta .btn-white:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .page-banner h1 { font-size: 2rem; }
+      .why-abd, .history-section, .flag-section, .pledges-section, .territory-section { padding: 48px 0; }
+      .timeline::before { left: 20px; }
+      .timeline-item,
+      .timeline-item:nth-child(even) {
+        justify-content: flex-start;
+        padding-left: 54px;
+        padding-right: 0;
+      }
+      .timeline-dot { left: 20px; }
+      .timeline-card { max-width: 100%; }
+      .flag-layout { grid-template-columns: 1fr; gap: 32px; }
+      .flag-image-box { order: -1; }
+      .district-highlight .big-number { font-size: 3.5rem; }
+      .join-cta h2 { font-size: 1.8rem; }
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<header>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo/abd-logo-white.png" alt="ABD Logo">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">
+            <span data-lang="en">Amal Vikas Dal</span>
+            <span data-lang="od" style="display:none">ଅମଳ ବିକାଶ ଦଳ</span>
+            <span data-lang="hi" style="display:none">अमल विकास दल</span>
+          </span>
+          <span class="nav-brand-tagline">
+            <span data-lang="en">Odisha Bahujan Samya</span>
+            <span data-lang="od" style="display:none">ଓଡ଼ିଶା ବହୁଜନ ସାମ୍ୟ</span>
+            <span data-lang="hi" style="display:none">ओडिशा बहुजन साम्य</span>
+          </span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html"><span data-lang="en">Home</span><span data-lang="od" style="display:none">ମୁଖ୍ୟ ପୃଷ୍ଠା</span><span data-lang="hi" style="display:none">मुख्य पृष्ठ</span></a></li>
+        <li><a href="about.html" class="active"><span data-lang="en">About</span><span data-lang="od" style="display:none">ଆମ ବିଷୟ</span><span data-lang="hi" style="display:none">हमारे बारे में</span></a></li>
+        <li><a href="manifesto.html"><span data-lang="en">Manifesto</span><span data-lang="od" style="display:none">ଇସ୍ତାହାର</span><span data-lang="hi" style="display:none">घोषणापत्र</span></a></li>
+        <li><a href="programs.html"><span data-lang="en">Programs</span><span data-lang="od" style="display:none">କାର୍ଯ୍ୟସୂଚୀ</span><span data-lang="hi" style="display:none">कार्यक्रम</span></a></li>
+        <li><a href="gallery.html"><span data-lang="en">Gallery</span><span data-lang="od" style="display:none">ଗ୍ୟାଲେରୀ</span><span data-lang="hi" style="display:none">गैलरी</span></a></li>
+        <li><a href="contact.html"><span data-lang="en">Contact</span><span data-lang="od" style="display:none">ଯୋଗାଯୋଗ</span><span data-lang="hi" style="display:none">संपर्क</span></a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="en" aria-label="Switch to English">EN</button>
+          <button class="lang-btn" data-lang="od" aria-label="Switch to Odia">ଓଡ଼</button>
+          <button class="lang-btn" data-lang="hi" aria-label="Switch to Hindi">हि</button>
+        </div>
+        <a href="contact.html" class="btn-join">
+          <span data-lang="en">Join Us</span>
+          <span data-lang="od" style="display:none">ଯୋଗ ଦିଅ</span>
+          <span data-lang="hi" style="display:none">जुड़ें</span>
+        </a>
+      </div>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <ul class="nav-links">
+      <li><a href="index.html"><span data-lang="en">Home</span><span data-lang="od" style="display:none">ମୁଖ୍ୟ ପୃଷ୍ଠା</span><span data-lang="hi" style="display:none">मुख्य पृष्ठ</span></a></li>
+      <li><a href="about.html"><span data-lang="en">About</span><span data-lang="od" style="display:none">ଆମ ବିଷୟ</span><span data-lang="hi" style="display:none">हमारे बारे में</span></a></li>
+      <li><a href="manifesto.html"><span data-lang="en">Manifesto</span><span data-lang="od" style="display:none">ଇସ୍ତାହାର</span><span data-lang="hi" style="display:none">घोषणापत्र</span></a></li>
+      <li><a href="programs.html"><span data-lang="en">Programs</span><span data-lang="od" style="display:none">କାର୍ଯ୍ୟସୂଚୀ</span><span data-lang="hi" style="display:none">कार्यक्रम</span></a></li>
+      <li><a href="gallery.html"><span data-lang="en">Gallery</span><span data-lang="od" style="display:none">ଗ୍ୟାଲେରୀ</span><span data-lang="hi" style="display:none">गैलरी</span></a></li>
+      <li><a href="contact.html"><span data-lang="en">Contact</span><span data-lang="od" style="display:none">ଯୋଗାଯୋଗ</span><span data-lang="hi" style="display:none">संपर्क</span></a></li>
+    </ul>
+    <div class="mobile-lang-row">
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="od">ଓଡ଼</button>
+      <button class="lang-btn" data-lang="hi">हि</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary mobile-join">
+      <span data-lang="en">Join the Movement</span>
+      <span data-lang="od" style="display:none">ଆନ୍ଦୋଳନରେ ଯୋଗ ଦିଅ</span>
+      <span data-lang="hi" style="display:none">आंदोलन में शामिल हों</span>
+    </a>
+    <button class="mobile-close" aria-label="Close menu" style="position:absolute;top:20px;right:20px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;">✕</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ═══ PAGE BANNER ═══ -->
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html"><span data-lang="en">Home</span><span data-lang="od" style="display:none">ମୁଖ୍ୟ ପୃଷ୍ଠା</span><span data-lang="hi" style="display:none">मुख्य पृष्ठ</span></a>
+        <span>›</span>
+        <span data-lang="en">About</span><span data-lang="od" style="display:none">ଆମ ବିଷୟ</span><span data-lang="hi" style="display:none">हमारे बारे में</span>
+      </div>
+      <h1>
+        <span data-lang="en">About Amal Vikas Dal</span>
+        <span data-lang="od" style="display:none">ଅମଳ ବିକାଶ ଦଳ ବିଷୟରେ</span>
+        <span data-lang="hi" style="display:none">अमल विकास दल के बारे में</span>
+      </h1>
+      <p>
+        <span data-lang="en">The People's Own Party of Odisha</span>
+        <span data-lang="od" style="display:none">ଓଡ଼ିଶାର ନିଜ ଜନ ଦଳ</span>
+        <span data-lang="hi" style="display:none">ओडिशा की जनता की अपनी पार्टी</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ THE PROBLEM WITH ODISHA TODAY ═══ -->
+  <section class="about-problem-section">
+    <div class="container">
+      <h2 class="section-heading reveal">
+        <span data-lang="en">The Problem with Odisha Today</span>
+        <span data-lang="od" style="display:none">ଆଜ ଓଡ଼ିଶାର ସମସ୍ୟା</span>
+        <span data-lang="hi" style="display:none">आज ओडिशा की समस्या</span>
+      </h2>
+      <p class="reveal reveal-delay-1" style="margin-top:1.5rem;max-width:800px;">
+        <span data-lang="en">Odisha is rich in natural resources — forests, rivers, minerals, coast — yet remains one of India's most underdeveloped states. According to various government and non-government reports, Odisha lags behind other states in nearly every key indicator:</span>
+        <span data-lang="od" style="display:none">ଓଡ଼ିଶା ପ୍ରାକୃତିକ ସଂସ୍ଥାନ — ଜଙ୍ଗଲ, ନଦୀ, ଖଣିଜ, ଉପକୂଳ — ସମ୍ପନ୍ନ, ତଥାପି ଭାରତର ସବୁଠୁ ପଛୁଆ ରାଜ୍ୟ ଗୁଡ଼ିକ ମଧ୍ୟରୁ ଅନ୍ୟତମ ଭ ା ବ େ ରହ ି ଛ ି ।</span>
+        <span data-lang="hi" style="display:none">ओडिशा प्राकृतिक संसाधनों — जंगल, नदियाँ, खनिज, समुद्री तट — से भरपूर है, फिर भी भारत के सबसे पिछड़े राज्यों में से एक बना हुआ है।</span>
+      </p>
+      <ul class="bullet-list reveal reveal-delay-2" style="margin-top:1.5rem;">
+        <li>
+          <span data-lang="en"><strong>Poverty:</strong> A disproportionately high percentage of Odisha's population lives below the poverty line</span>
+          <span data-lang="od" style="display:none"><strong>ଦ ା ର ି ଦ ୍ ର ୍ ୟ:</strong> ଓଡ଼ିଶାର ଜ ନ ଗ ଣ ର ଅ ସ ୁ ଷ ୍ ଠ ଉ ଚ ୍ ଚ ପ ୍ ର ତ ି ଶ ତ ଦ ା ର ି ଦ ୍ ର ୍ ୟ ସ ୀ ମ ା ତ ଳ େ</span>
+          <span data-lang="hi" style="display:none"><strong>गरीबी:</strong> ओडिशा की जनसंख्या का असंगत रूप से उच्च प्रतिशत गरीबी रेखा से नीचे जीवन यापन करता है</span>
+        </li>
+        <li>
+          <span data-lang="en"><strong>Child &amp; Maternal Health:</strong> Infant mortality and maternal mortality rates remain among the highest in India</span>
+          <span data-lang="od" style="display:none"><strong>ଶ ି ଶ ୁ ଓ ମ ା ତ ୃ ସ ୍ ୱ ା ସ ୍ ଥ ୍ ୟ:</strong> ଶ ି ଶ ୁ ମ ୃ ତ ୍ ୟ ୁ ଓ ମ ା ତ ୃ ମ ୃ ତ ୍ ୟ ୁ ହ ା ର ଭ ା ର ତ ର ସ ର ୍ ବ ୋ ଚ ୍ ଚ ଗ ୁ ଡ ଼ ି କ ମ ଧ ୍ ୟ ର ୁ</span>
+          <span data-lang="hi" style="display:none"><strong>बाल एवं मातृ स्वास्थ्य:</strong> शिशु मृत्यु दर और मातृ मृत्यु दर भारत में सर्वाधिक में से एक</span>
+        </li>
+        <li>
+          <span data-lang="en"><strong>Migration:</strong> Millions of Odias are forced to migrate to other states for daily wage work</span>
+          <span data-lang="od" style="display:none"><strong>ପ ୍ ର ବ ଜ ନ:</strong> ଲ କ ୍ ଷ ଲ କ ୍ ଷ ଓ ଡ ଼ ି ଆ ଦ ୈ ନ ି କ ମ ଜ ୁ ର ି ପ ା ଇ ଁ ଅ ନ ୍ ୟ ର ା ଜ ୍ ୟ ଗ ୁ ଡ ଼ ି କ ୁ ଯ ା ଇ ବ ା କ ୁ ବ ା ଧ ୍ ୟ</span>
+          <span data-lang="hi" style="display:none"><strong>पलायन:</strong> लाखों ओड़िया दैनिक मजदूरी के लिए दूसरे राज्यों में जाने को मजबूर हैं</span>
+        </li>
+        <li>
+          <span data-lang="en"><strong>Unemployment:</strong> Especially high among youth, women, and tribal communities</span>
+          <span data-lang="od" style="display:none"><strong>ବ େ ର ୋ ଜ ଗ ା ର ୀ:</strong> ଯ ୁ ବ, ମ ହ ି ଳ ା ଓ ଆ ଦ ି ବ ା ସ ୀ ସ ମ ୁ ଦ ା ୟ ମ ଧ ୍ ୟ ର େ ବ ି ଶ େ ଷ ଭ ା ବ େ ଅ ଧ ି କ</span>
+          <span data-lang="hi" style="display:none"><strong>बेरोज़गारी:</strong> विशेष रूप से युवाओं, महिलाओं और आदिवासी समुदायों में अधिक</span>
+        </li>
+        <li>
+          <span data-lang="en"><strong>Illiteracy:</strong> Still significantly higher than the national average</span>
+          <span data-lang="od" style="display:none"><strong>ନ ି ର କ ୍ ଷ ର ତ ା:</strong> ଜ ା ତ ୀ ୟ ହ ା ର ତ ୁ ଳ ନ ା ର େ ଏ ଖ ନ ବ ି ଯ ଥ େ ଷ ୍ ଠ ଅ ଧ ି କ</span>
+          <span data-lang="hi" style="display:none"><strong>निरक्षरता:</strong> अभी भी राष्ट्रीय औसत से काफी अधिक</span>
+        </li>
+      </ul>
+      <p class="reveal reveal-delay-3" style="margin-top:1.5rem;">
+        <span data-lang="en">Since the state's formation in 1973, despite multiple governments making promises, no fundamental structural change has occurred.</span>
+        <span data-lang="od" style="display:none">୧ ୯ ୭ ୩ ମ ସ ି ହ ା ର େ ର ା ଜ ୍ ୟ ଗ ଠ ନ ଠ ା ର ୁ, ବ ି ଭ ି ନ ୍ ନ ସ ର କ ା ର ମ ା ନ ଙ ୍ ଙ ର ପ ୍ ର ତ ି ଶ ୍ ର ୁ ତ ି ସ ତ ୍ ତ ୍ ୱ େ, କ ୌ ଣ ସ ି ମ ୌ ଳ ି କ ପ ର ି ବ ର ୍ ତ ନ ହ ୋ ଇ ପ ା ର ି ନ ଥ ି ଲ ା ।</span>
+        <span data-lang="hi" style="display:none">१९७३ में राज्य के गठन के बाद से, विभिन्न सरकारों के वादों के बावजूद, कोई मूलभूत संरचनात्मक परिवर्तन नहीं हुआ।</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ WHY EXISTING PARTIES FAILED ═══ -->
+  <section class="about-who-section">
+    <div class="container">
+      <h2 class="section-heading reveal">
+        <span data-lang="en">Why Existing Parties Have Failed</span>
+        <span data-lang="od" style="display:none">ମ ୌ ଜ ୁ ଦ ଦ ଳ ଗ ୁ ଡ ଼ ି କ କ ା ହ ି ଁ କ ି ବ ୍ ୟ ର ୍ ଥ ହ ୋ ଇ ଛ ନ ୍ ତ ି</span>
+        <span data-lang="hi" style="display:none">मौजूदा पार्टियाँ क्यों विफल हुईं</span>
+      </h2>
+      <ul class="bullet-list reveal reveal-delay-1" style="margin-top:2rem;">
+        <li>
+          <span data-lang="en">Led by elite upper-caste groups and dynastic families</span>
+          <span data-lang="od" style="display:none">ଉ ଚ ୍ ଚ ଜ ା ତ ି ଅ ଭ ି ଜ ା ତ ବ ର ୍ ଗ ଓ ଉ ତ ୍ ତ ର ା ଧ ି କ ା ର ୀ ପ ର ି ବ ା ର ଦ ୍ ୱ ା ର ା ନ େ ତ ୃ ତ ୍ ୱ</span>
+          <span data-lang="hi" style="display:none">उच्च जाति के अभिजात वर्ग और वंशवादी परिवारों का नेतृत्व</span>
+        </li>
+        <li>
+          <span data-lang="en">Caste-based vote-bank politics with no real inclusion</span>
+          <span data-lang="od" style="display:none">ଜ ା ତ ି ଆ ଧ ା ର ି ତ ଭ ୋ ଟ-ବ ୍ ୟ ା ଙ ୍ ଙ ର ା ଜ ନ ୀ ତ ି — ପ ୍ ର କ ୃ ତ ଅ ନ ୍ ତ ର ୍ ଭ ୁ କ ୍ ତ ି ନ ଥ ି ।</span>
+          <span data-lang="hi" style="display:none">वोट बैंक की जाति-आधारित राजनीति, वास्तविक समावेश नहीं</span>
+        </li>
+        <li>
+          <span data-lang="en">Governed for personal benefit rather than public service</span>
+          <span data-lang="od" style="display:none">ଲ ୋ କ ସ େ ବ ା ବ ଦ ଳ ର େ ବ ୍ ୟ କ ୍ ତ ି ଗ ତ ଫ ା ୟ ଦ ା ପ ା ଇ ଁ ଶ ା ସ ନ</span>
+          <span data-lang="hi" style="display:none">सार्वजनिक सेवा के बजाय व्यक्तिगत लाभ के लिए शासन</span>
+        </li>
+        <li>
+          <span data-lang="en">Failed to develop science, technology, and skilled industry</span>
+          <span data-lang="od" style="display:none">ବ ି ଜ ୍ ଞ ା ନ, ପ ୍ ର ୌ ଦ ୍ ୟ ୋ ଗ ି କ ୀ ଓ ଦ କ ୍ ଷ ଶ ି ଳ ୍ ପ ର ବ ି କ ା ଶ ର େ ବ ି ଫ ଳ</span>
+          <span data-lang="hi" style="display:none">विज्ञान, प्रौद्योगिकी और कुशल उद्योग विकसित करने में विफल</span>
+        </li>
+        <li>
+          <span data-lang="en">Allowed Odisha's resources — mines, forests, water — to be exploited by outside corporations</span>
+          <span data-lang="od" style="display:none">ଓ ଡ ଼ ି ଶ ାର ଖ ଣ ି, ଜ ଙ ୍ ଗ ଲ, ଜ ଳ ଆ ଦ ି ର ୁ ବ ା ହ ୍ ୟ ନ ି ଗ ମ ଗ ୁ ଡ ଼ ି କ ଶ ୋ ଷ ଣ କ ର ି ଲ େ</span>
+          <span data-lang="hi" style="display:none">ओडिशा के खदान, जंगल, पानी को बाहरी कंपनियों द्वारा शोषित होने दिया</span>
+        </li>
+        <li>
+          <span data-lang="en">Rampant corruption, administrative failure, and political instability</span>
+          <span data-lang="od" style="display:none">ବ ୍ ୟ ା ପ କ ଦ ୁ ର ୍ ନ ୀ ତ ି, ପ ୍ ର ଶ ା ସ ନ ି କ ଅ ବ ସ ା ଦ ଓ ର ା ଜ ନ ୈ ତ ି କ ଅ ସ ୍ ଥ ି ର ତ ା</span>
+          <span data-lang="hi" style="display:none">व्यापक भ्रष्टाचार, प्रशासनिक विफलता और राजनीतिक अस्थिरता</span>
+        </li>
+        <li>
+          <span data-lang="en">Drug and alcohol trade growing unchecked — causing social destruction, family violence, and community breakdown</span>
+          <span data-lang="od" style="display:none">ନ ଶ ା ଦ ୍ ର ବ ୍ ୟ ବ ସ ା ୟ ଅ ନ ି ୟ ନ ୍ ତ ୍ ର ି ତ — ସ ା ମ ା ଜ ି କ ବ ି ନ ା ଶ, ପ ର ି ବ ା ର ହ ି ଂ ସ ାର କ ା ର ଣ</span>
+          <span data-lang="hi" style="display:none">नशे और शराब का अनियंत्रित व्यापार — सामाजिक विनाश, पारिवारिक हिंसा का कारण</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ WHO IS ABD — 2-col layout ═══ -->
+  <section class="about-commitment-section">
+    <div class="container">
+      <div class="about-who-grid" style="display:grid;grid-template-columns:60% 40%;gap:48px;align-items:center;">
+        <div class="reveal">
+          <h2>
+            <span data-lang="en">Who Is ABD?</span>
+            <span data-lang="od" style="display:none">ABD କ ି େ ?</span>
+            <span data-lang="hi" style="display:none">ABD कौन है?</span>
+          </h2>
+          <p style="margin-top:1rem;">
+            <span data-lang="en">ABD — <strong>Amal Vikas Dal</strong>, formally known as <strong>Odisha Bahujan Samya</strong> — is a new political force formed by and for the people of Odisha.</span>
+            <span data-lang="od" style="display:none">ABD — <strong>ଅ ମ ଳ ବ ି କ ା ଶ ଦ ଳ</strong>, ଆ ନ ୁ ଷ ୍ ଠ ା ନ ି କ ଭ ା ବ େ <strong>ଓ ଡ ଼ ି ଶ ା ବ ହ ୁ ଜ ନ ସ ା ମ ୍ ୟ</strong> ନ ା ମ ର େ ପ ର ି ଚ ି ତ — ଓ ଡ ଼ ି ଶ ାର ଜ ନ ଗ ଣ ଦ ୍ ୱ ା ର ା ଓ ପ ା ଇ ଁ ଗ ଠ ି ତ ।</span>
+            <span data-lang="hi" style="display:none">ABD — <strong>अमल विकास दल</strong>, जिसे औपचारिक रूप से <strong>ओडिशा बहुजन साम्य</strong> के नाम से जाना जाता है — ओडिशा के लोगों द्वारा और उनके लिए बनाया गया नया राजनीतिक मंच है।</span>
+          </p>
+          <ul class="bullet-list" style="margin-top:1rem;">
+            <li>
+              <span data-lang="en"><strong>Founded by:</strong> Social activists, community workers, and youth who believe in genuine change</span>
+              <span data-lang="od" style="display:none"><strong>ପ ୍ ର ତ ି ଷ ୍ ଠ ି ତ:</strong> ସ ା ମ ା ଜ ି କ ଆ ନ ୍ ଦ ୋ ଳ ନ କ ା ର ୀ, ଜ ନ ଗ ୋ ଷ ୍ ଠ ୀ କ ର ୍ ମ ୀ ଓ ଯ ୁ ବ</span>
+              <span data-lang="hi" style="display:none"><strong>स्थापित:</strong> सामाजिक कार्यकर्ताओं, सामुदायिक कार्यकर्ताओं और युवाओं द्वारा</span>
+            </li>
+            <li>
+              <span data-lang="en"><strong>Covering:</strong> All 30 districts of Odisha</span>
+              <span data-lang="od" style="display:none"><strong>ଅ ନ ୍ ତ ର ୍ ଭ ୁ କ ୍ ତ:</strong> ଓ ଡ ଼ ି ଶ ାର ସ ମ ସ ୍ ତ ୩ ୦ ଟ ି ଜ ି ଲ ୍ ଲ ା</span>
+              <span data-lang="hi" style="display:none"><strong>कार्यक्षेत्र:</strong> ओडिशा के सभी ३० जिले</span>
+            </li>
+            <li>
+              <span data-lang="en"><strong>Flag:</strong> Blue, White, and Red — bearing the Odisha map and Ashoka Chakra</span>
+              <span data-lang="od" style="display:none"><strong>ଧ ୍ ୱ ଜ:</strong> ନ ୀ ଳ, ସ ଫ େ ଦ ଓ ଲ ା ଲ — ଓ ଡ ଼ ି ଶ ା ମ ା ନ ଚ ି ତ ୍ ର ଓ ଅ ଶ ୋ କ ଚ କ ୍ ର ଯ ୁ କ ୍ ତ</span>
+              <span data-lang="hi" style="display:none"><strong>ध्वज:</strong> नीला, सफेद और लाल — ओडिशा का मानचित्र और अशोक चक्र के साथ</span>
+            </li>
+            <li>
+              <span data-lang="en"><strong>Party Colour:</strong> Blue (White, Red combination)</span>
+              <span data-lang="od" style="display:none"><strong>ଦ ଳ ର ଙ ୍ ଗ:</strong> ନ ୀ ଳ (ସ ଫ େ ଦ, ଲ ା ଲ ମ ି ଶ ୍ ର ଣ)</span>
+              <span data-lang="hi" style="display:none"><strong>पार्टी रंग:</strong> नीला (सफेद, लाल के साथ)</span>
+            </li>
+          </ul>
+          <p style="margin-top:1.2rem;font-style:italic;color:var(--green-dark);font-weight:600;">
+            <span data-lang="en">ABD is not just a political party — it is a social movement committed to changing the system.</span>
+            <span data-lang="od" style="display:none">ABD ଶ ୁ ଧ ୁ ଏ କ ଟ ି ର ା ଜ ନ ୈ ତ ି କ ଦ ଳ ନ ୁ ହ ଁ — ଏ ହ ା ଏ କ ଟ ି ସ ା ମ ା ଜ ି କ ଆ ନ ୍ ଦ ୋ ଳ ନ ।</span>
+            <span data-lang="hi" style="display:none">ABD केवल एक राजनीतिक पार्टी नहीं है — यह एक सामाजिक आंदोलन है।</span>
+          </p>
+        </div>
+        <div class="about-who-image reveal reveal-delay-2">
+          <img src="images/logo/flag.png" alt="ABD Party Flag — Blue, White and Red with Odisha Map" style="width:100%;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,0.12);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ OUR COMMITMENT ═══ -->
+  <section class="about-who-section">
+    <div class="container">
+      <h2 class="section-heading reveal">
+        <span data-lang="en">Our Commitment</span>
+        <span data-lang="od" style="display:none">ଆ ମ ପ ୍ ର ତ ି ଶ ୍ ର ୁ ତ ି</span>
+        <span data-lang="hi" style="display:none">हमारी प्रतिबद्धता</span>
+      </h2>
+      <div class="pledge-block reveal reveal-delay-1" style="margin-top:2rem;">
+        <h3>
+          <span data-lang="en">Pratibadhata — Our Pledge to Odisha</span>
+          <span data-lang="od" style="display:none">ପ ୍ ର ତ ି ବ ଦ ୍ ଧ ତ ା — ଓ ଡ ଼ ି ଶ ା ପ ା ଇ ଁ ଆ ମ ଅ ଙ ୍ ଗ ୀ କ ା ର</span>
+          <span data-lang="hi" style="display:none">प्रतिबद्धता — ओडिशा के लिए हमारा संकल्प</span>
+        </h3>
+        <p>
+          <span data-lang="en">ABD commits to achieving its constitutional and humanitarian goals, and to providing every citizen with the right to livelihood, equality, and dignity. Our goal is not just development of individuals, but overall, holistic development of all.</span>
+          <span data-lang="od" style="display:none">ଅ ମ ଳ ବ ି କ ା ଶ ଦ ଳ ଏ ହ ାର ସ ା ଂ ବ ି ଧ ା ନ ି କ ଓ ମ ା ନ ବ ୀ ୟ ଲ କ ୍ ଷ ୍ ୟ ଗ ୁ ଡ ଼ ି କ ପ ୂ ର ଣ କ ର ି ବ ା ଓ ପ ୍ ର ତ ୍ ୟ େ କ ନ ା ଗ ର ି କ ଙ ୍ ଙ ୁ ଜ ୀ ବ ି କ ା ର ଅ ଧ ି କ ା ର ଦ େ ବ ା ପ ା ଇ ଁ ଅ ଙ ୍ ଗ ୀ କ ା ର ବ ଦ ୍ ଧ ।</span>
+          <span data-lang="hi" style="display:none">ABD अपने संवैधानिक और मानवीय लक्ष्यों को पूरा करने तथा हर नागरिक को आजीविका, समता और गरिमा का अधिकार देने के लिए प्रतिबद्ध है।</span>
+        </p>
+        <ul class="pledge-list">
+          <li>
+            <span data-lang="en">Odisha is a state of multiple languages, cultures, diverse religions, and numerous social communities</span>
+            <span data-lang="od" style="display:none">ଓ ଡ ଼ ି ଶ ା ବ ହ ୁ ଭ ା ଷ ା, ସ ା ଂ ସ ୍ କ ୃ ତ ି କ ବ ୈ ବ ି ଧ ୍ ୟ ଓ ଅ ନ େ କ ସ ା ମ ା ଜ ି କ ଗ ୋ ଷ ୍ ଠ ୀ ର ର ା ଜ ୍ ୟ</span>
+            <span data-lang="hi" style="display:none">ओडिशा बहु-भाषी, सांस्कृतिक विविधता, विविध धर्मों और अनेक सामाजिक समुदायों का राज्य है</span>
+          </li>
+          <li>
+            <span data-lang="en">All communities deserve equal and proportional representation in governance, administration, business, education, and judiciary</span>
+            <span data-lang="od" style="display:none">ସ ମ ସ ୍ ତ ଗ ୋ ଷ ୍ ଠ ୀ ଶ ା ସ ନ, ପ ୍ ର ଶ ା ସ ନ, ବ ୍ ୟ ବ ସ ା ୟ, ଶ ି କ ୍ ଷ ା ଓ ବ ି ଚ ା ର ବ ି ଭ ା ଗ ର େ ସ ମ ା ନ ପ ୍ ର ତ ି ନ ି ଧ ି ତ ୍ ୱ ର ଅ ଧ ି କ ା ର ୀ</span>
+            <span data-lang="hi" style="display:none">सभी समुदाय शासन, प्रशासन, व्यवसाय, शिक्षा और न्यायपालिका में समान एवं आनुपातिक प्रतिनिधित्व के हकदार हैं</span>
+          </li>
+          <li>
+            <span data-lang="en">ABD works for social, economic, political, and cultural transformation of Odisha</span>
+            <span data-lang="od" style="display:none">ABD ଓ ଡ ଼ ି ଶ ାର ସ ା ମ ା ଜ ି କ, ଆ ର ୍ ଥ ି କ, ର ା ଜ ନ ୈ ତ ି କ ଓ ସ ା ଂ ସ ୍ କ ୃ ତ ି କ ପ ର ି ବ ର ୍ ତ ନ ପ ା ଇ ଁ ସ ଂ ଘ ର ୍ ଷ ର ତ</span>
+            <span data-lang="hi" style="display:none">ABD ओडिशा के सामाजिक, आर्थिक, राजनीतिक और सांस्कृतिक परिवर्तन के लिए काम करती है</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ORGANISATIONAL STRUCTURE ═══ -->
+  <section class="about-org-section">
+    <div class="container">
+      <h2 class="section-heading reveal">
+        <span data-lang="en">Organisational Structure</span>
+        <span data-lang="od" style="display:none">ସ ଂ ଗ ଠ ନ ା ତ ୍ ମ କ ଢ ା ଞ ୍ ଚ ା</span>
+        <span data-lang="hi" style="display:none">संगठनात्मक ढाँचा</span>
+      </h2>
+      <div class="org-chart reveal reveal-delay-1" style="margin-top:2.5rem;">
+        <div class="org-level">
+          <div class="org-box">
+            <h4><span data-lang="en">Annual Assembly</span><span data-lang="od" style="display:none">ବ ା ର ୍ ଷ ି କ ସ ଭ ା</span><span data-lang="hi" style="display:none">वार्षिक सभा</span></h4>
+            <p><span data-lang="en">1,000 members / delegates</span><span data-lang="od" style="display:none">୧,୦୦୦ ସ ଦ ସ ୍ ୟ</span><span data-lang="hi" style="display:none">१,००० सदस्य / प्रतिनिधि</span></p>
+          </div>
+        </div>
+        <div class="org-connector"></div>
+        <div class="org-level">
+          <div class="org-box">
+            <h4><span data-lang="en">State Council</span><span data-lang="od" style="display:none">ର ା ଜ ୍ ୟ ପ ର ି ଷ ଦ</span><span data-lang="hi" style="display:none">राज्य परिषद</span></h4>
+            <p><span data-lang="en">340 Block representatives</span><span data-lang="od" style="display:none">୩୪୦ ବ ୍ ଲ କ ପ ୍ ର ତ ି ନ ି ଧ ି</span><span data-lang="hi" style="display:none">३४० ब्लॉक प्रतिनिधि</span></p>
+          </div>
+        </div>
+        <div class="org-connector"></div>
+        <div class="org-level">
+          <div class="org-box">
+            <h4><span data-lang="en">Executive Committee</span><span data-lang="od" style="display:none">କ ା ର ୍ ଯ ୍ ୟ ନ ି ର ୍ ବ ା ହ ୀ ସ ମ ି ତ ି</span><span data-lang="hi" style="display:none">कार्यकारी समिति</span></h4>
+            <p><span data-lang="en">110 members — Central Committee</span><span data-lang="od" style="display:none">୧୧୦ ସ ଦ ସ ୍ ୟ</span><span data-lang="hi" style="display:none">११० सदस्य — केंद्रीय समिति</span></p>
+          </div>
+        </div>
+        <div class="org-connector"></div>
+        <div class="org-level" style="gap:12px;flex-wrap:wrap;justify-content:center;">
+          <div class="org-box" style="min-width:180px;">
+            <h4><span data-lang="en">44 State Officials</span><span data-lang="od" style="display:none">୪୪ ର ା ଜ ୍ ୟ ଅ ଧ ି କ ା ର ୀ</span><span data-lang="hi" style="display:none">४४ राज्य अधिकारी</span></h4>
+            <p><span data-lang="en">Working officials</span><span data-lang="od" style="display:none">କ ା ର ୍ ୟ ର ତ ଅ ଧ ି କ ା ର ୀ</span><span data-lang="hi" style="display:none">कार्यकारी अधिकारी</span></p>
+          </div>
+          <div class="org-box" style="min-width:180px;">
+            <h4><span data-lang="en">30 District Presidents</span><span data-lang="od" style="display:none">୩୦ ଜ ି ଲ ୍ ଲ ା ସ ଭ ା ପ ତ ି</span><span data-lang="hi" style="display:none">३० जिला अध्यक्ष</span></h4>
+            <p><span data-lang="en">+ 3 Vice Presidents each</span><span data-lang="od" style="display:none">+ ୩ ଉ ପ ସ ଭ ା ପ ତ ି ପ ୍ ର ତ ୍ ୟ େ କ</span><span data-lang="hi" style="display:none">+ ३ उपाध्यक्ष प्रत्येक</span></p>
+          </div>
+          <div class="org-box" style="min-width:180px;">
+            <h4><span data-lang="en">Booth Level</span><span data-lang="od" style="display:none">ବ ୁ ଥ ସ ୁ ର</span><span data-lang="hi" style="display:none">बूथ स्तर</span></h4>
+            <p><span data-lang="en">1,000 GP coordinators</span><span data-lang="od" style="display:none">୧,୦୦୦ ଗ ୍ ର ା ମ ପ ଞ ୍ ଚ ା ୟ ତ ସ ଂ ୟ ୋ ଜ କ</span><span data-lang="hi" style="display:none">१,००० ग्राम पंचायत समन्वयक</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key positions grid -->
+      <div class="reveal reveal-delay-2" style="margin-top:3rem;">
+        <h3 style="text-align:center;margin-bottom:1.5rem;">
+          <span data-lang="en">Key Leadership Positions</span>
+          <span data-lang="od" style="display:none">ମ ୁ ଖ ୍ ୟ ନ େ ତ ୃ ତ ୍ ୱ ପ ଦ</span>
+          <span data-lang="hi" style="display:none">प्रमुख नेतृत्व पद</span>
+        </h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;">
+          <div class="pillar-card" style="padding:24px;text-align:left;">
+            <ul style="list-style:none;padding:0;margin:0;">
+              <li style="padding:8px 0 8px 0;border-bottom:1px solid rgba(46,125,50,0.12);font-size:0.92rem;color:var(--text-mid);">
+                <span data-lang="en">State President / Chairperson</span><span data-lang="od" style="display:none">ର ା ଜ ୍ ୟ ସ ଭ ା ପ ତ ି</span><span data-lang="hi" style="display:none">राज्य अध्यक्ष / सभापति</span>
+              </li>
+              <li style="padding:8px 0;border-bottom:1px solid rgba(46,125,50,0.12);font-size:0.92rem;color:var(--text-mid);">
+                <span data-lang="en">Executive President / Chairman</span><span data-lang="od" style="display:none">କ ା ର ୍ ଯ ୍ ୟ ନ ି ର ୍ ବ ା ହ ୀ ସ ଭ ା ପ ତ ି</span><span data-lang="hi" style="display:none">कार्यकारी अध्यक्ष / चेयरमैन</span>
+              </li>
+              <li style="padding:8px 0;border-bottom:1px solid rgba(46,125,50,0.12);font-size:0.92rem;color:var(--text-mid);">
+                <span data-lang="en">10 Vice Presidents</span><span data-lang="od" style="display:none">୧ ୦ ଜ ଣ ଉ ପ ସ ଭ ା ପ ତ ି</span><span data-lang="hi" style="display:none">१० उपाध्यक्ष</span>
+              </li>
+              <li style="padding:8px 0;font-size:0.92rem;color:var(--text-mid);">
+                <span data-lang="en">Secretary General</span><span data-lang="od" style="display:none">ମ ହ ା ସ ଚ ି ବ</span><span data-lang="hi" style="display:none">महासचिव</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pillar-card" style="padding:24px;text-align:left;">
+            <ul style="list-style:none;padding:0;margin:0;">
+              <li style="padding:8px 0;border-bottom:1px solid rgba(46,125,50,0.12);font-size:0.92rem;color:var(--text-mid);">
+                <span data-lang="en">Parliamentary Board President</span><span data-lang="od" style="display:none">ସ ଂ ସ ଦ ୀ ୟ ବ ୋ ର ୍ ଡ ସ ଭ ା ପ ତ ି</span><span data-lang="hi" style="display:none">संसदीय बोर्ड अध्यक्ष</span>
+              </li>
+              <li style="padding:8px 0;border-bottom:1px solid rgba(46,125,50,0.12);font-size:0.92rem;color:var(--text-mid);">
+                <span data-lang="en">10 General Secretaries</span><span data-lang="od" style="display:none">୧ ୦ ସ ା ଧ ା ର ଣ ସ ଚ ି ବ</span><span data-lang="hi" style="display:none">१० सामान्य सचिव</span>
+              </li>
+              <li style="padding:8px 0;border-bottom:1px solid rgba(46,125,50,0.12);font-size:0.92rem;color:var(--text-mid);">
+                <span data-lang="en">15 Editors</span><span data-lang="od" style="display:none">୧ ୫ ସ ଂ ପ ା ଦ କ</span><span data-lang="hi" style="display:none">१५ संपादक</span>
+              </li>
+              <li style="padding:8px 0;font-size:0.92rem;color:var(--text-mid);">
+                <span data-lang="en">2 Treasurers &amp; 2 Spokespersons</span><span data-lang="od" style="display:none">୨ କ ୋ ଷ ା ଧ ୍ ୟ କ ୍ ଷ ଓ ୨ ମ ୁ ଖ ପ ା ତ ୍ ର</span><span data-lang="hi" style="display:none">२ कोषाध्यक्ष और २ प्रवक्ता</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ JOIN CTA ═══ -->
+  <section class="join-cta">
+    <div class="container">
+      <h2 class="reveal">
+        <span data-lang="en">Be Part of the Change</span>
+        <span data-lang="od" style="display:none">ପ ର ି ବ ର ୍ ତ ନ ର ଅ ଂ ଶ ହ ୁ ଅ</span>
+        <span data-lang="hi" style="display:none">बदलाव का हिस्सा बनें</span>
+      </h2>
+      <p class="reveal reveal-delay-1">
+        <span data-lang="en">Join ABD and help build a just, equal Odisha.</span>
+        <span data-lang="od" style="display:none">ABD ର େ ଯ ୋ ଗ ଦ ି ଅ ଏ ବ ଂ ଏ କ ଟ ି ନ ୍ ୟ ା ୟ ଓ ସ ମ ଓ ଡ ଼ ି ଶ ା ଗ ଢ ଼ ି ତ ୋ ଳ ।</span>
+        <span data-lang="hi" style="display:none">ABD से जुड़ें और एक न्यायपूर्ण, समतामूलक ओडिशा बनाने में मदद करें।</span>
+      </p>
+      <a href="contact.html" class="btn btn-primary btn-lg reveal reveal-delay-2">
+        <span data-lang="en">Join the Movement</span>
+        <span data-lang="od" style="display:none">ଆ ନ ୍ ଦ ୋ ଳ ନ ର େ ଯ ୋ ଗ ଦ ି ଅ</span>
+        <span data-lang="hi" style="display:none">आंदोलन में शामिल हों</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="images/logo/abd-logo-white.png" alt="ABD Logo">
+          <span class="footer-brand-name"><span data-lang="en">Amal Vikas Dal</span><span data-lang="od" style="display:none">ଅ ମ ଳ ବ ି କ ା ଶ ଦ ଳ</span><span data-lang="hi" style="display:none">अमल विकास दल</span></span>
+        </div>
+        <p><span data-lang="en">Amal Vikas Dal (Odisha Bahujan Samya) — fighting for justice, equality, and real development for every citizen of Odisha.</span><span data-lang="od" style="display:none">ଅ ମ ଳ ବ ି କ ା ଶ ଦ ଳ — ଓ ଡ ଼ ି ଶ ାର ପ ୍ ର ତ ୍ ୟ େ କ ନ ା ଗ ର ି କ ଙ ୍ ଙ ୁ ନ ୍ ୟ ା ୟ, ସ ମ ତ ା ଓ ପ ୍ ର ଗ ତ ି ।</span><span data-lang="hi" style="display:none">अमल विकास दल — ओडिशा के हर नागरिक के लिए न्याय, समता और विकास।</span></p>
+        <p class="footer-tagline"><span data-lang="en">"For Justice. For Equality. For Odisha."</span><span data-lang="od" style="display:none">"ନ ୍ ୟ ା ୟ ପ ା ଇ ଁ। ସ ମ ତ ା ପ ା ଇ ଁ। ଓ ଡ ଼ ି ଶ ା ପ ା ଇ ଁ।"</span><span data-lang="hi" style="display:none">"न्याय के लिए। समता के लिए। ओडिशा के लिए।"</span></p>
+      </div>
+      <div class="footer-col">
+        <h4><span data-lang="en">Quick Links</span><span data-lang="od" style="display:none">ଦ ୍ ର ୁ ତ ଲ ି ଙ ୍ ଙ</span><span data-lang="hi" style="display:none">त्वरित लिंक</span></h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><span data-lang="en">Home</span><span data-lang="od" style="display:none">ମ ୁ ଖ ୍ ୟ ପ ୃ ଷ ୍ ଠ ା</span><span data-lang="hi" style="display:none">मुख्य पृष्ठ</span></a></li>
+          <li><a href="about.html"><span data-lang="en">About</span><span data-lang="od" style="display:none">ଆ ମ ବ ି ଷ ୟ</span><span data-lang="hi" style="display:none">हमारे बारे में</span></a></li>
+          <li><a href="manifesto.html"><span data-lang="en">Manifesto</span><span data-lang="od" style="display:none">ଇ ସ ୍ ତ ା ହ ା ର</span><span data-lang="hi" style="display:none">घोषणापत्र</span></a></li>
+          <li><a href="programs.html"><span data-lang="en">Programs</span><span data-lang="od" style="display:none">କ ା ର ୍ ଯ ୍ ୟ ସ ୂ ଚ ୀ</span><span data-lang="hi" style="display:none">कार्यक्रम</span></a></li>
+          <li><a href="gallery.html"><span data-lang="en">Gallery</span><span data-lang="od" style="display:none">ଗ ୍ ୟ ା ଲ େ ର ୀ</span><span data-lang="hi" style="display:none">गैलरी</span></a></li>
+          <li><a href="contact.html"><span data-lang="en">Contact</span><span data-lang="od" style="display:none">ଯ ୋ ଗ ା ଯ ୋ ଗ</span><span data-lang="hi" style="display:none">संपर्क</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4><span data-lang="en">Programs</span><span data-lang="od" style="display:none">କ ା ର ୍ ଯ ୍ ୟ ସ ୂ ଚ ୀ</span><span data-lang="hi" style="display:none">कार्यक्रम</span></h4>
+        <ul class="footer-links">
+          <li><a href="programs.html#agriculture"><span data-lang="en">Agriculture</span><span data-lang="od" style="display:none">କ ୃ ଷ ି</span><span data-lang="hi" style="display:none">कृषि</span></a></li>
+          <li><a href="programs.html#land"><span data-lang="en">Land Rights</span><span data-lang="od" style="display:none">ଭ ୂ ମ ି</span><span data-lang="hi" style="display:none">भूमि</span></a></li>
+          <li><a href="programs.html#education"><span data-lang="en">Education</span><span data-lang="od" style="display:none">ଶ ି କ ୍ ଷ ା</span><span data-lang="hi" style="display:none">शिक्षा</span></a></li>
+          <li><a href="programs.html#health"><span data-lang="en">Health</span><span data-lang="od" style="display:none">ସ ୍ ୱ ା ସ ୍ ଥ ୍ ୟ</span><span data-lang="hi" style="display:none">स्वास्थ्य</span></a></li>
+          <li><a href="programs.html#mining"><span data-lang="en">Mining</span><span data-lang="od" style="display:none">ଖ ଣ ି</span><span data-lang="hi" style="display:none">खनन</span></a></li>
+          <li><a href="programs.html#women"><span data-lang="en">Women &amp; Youth</span><span data-lang="od" style="display:none">ମ ହ ି ଳ ା ଓ ଯ ୁ ବ</span><span data-lang="hi" style="display:none">महिला एवं युवा</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4><span data-lang="en">Contact Us</span><span data-lang="od" style="display:none">ଯ ୋ ଗ ା ଯ ୋ ଗ</span><span data-lang="hi" style="display:none">संपर्क करें</span></h4>
+        <div class="contact-info-item"><span class="icon">📍</span><span><span data-lang="en">Bhubaneswar, Odisha, India</span><span data-lang="od" style="display:none">ଭ ୁ ବ ନ େ ଶ ୍ ୱ ର, ଓ ଡ ଼ ି ଶ ା</span><span data-lang="hi" style="display:none">भुवनेश्वर, ओडिशा</span></span></div>
+        <div class="contact-info-item"><span class="icon">✉️</span><span>abdodisha@gmail.com</span></div>
+        <div class="social-icons mt-3">
+          <a href="#" class="social-icon" aria-label="WhatsApp">💬</a>
+          <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+          <a href="#" class="social-icon" aria-label="YouTube">▶️</a>
+          <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p><span data-lang="en">© 2024 Amal Vikas Dal (Odisha Bahujan Samya). All Rights Reserved.</span><span data-lang="od" style="display:none">© ୨ ୦ ୨ ୪ ଅ ମ ଳ ବ ି କ ା ଶ ଦ ଳ। ସ ର ୍ ବ ସ ି ଦ ୍ ଧ ା ନ ୍ ତ ସ ୁ ର କ ୍ ଷ ି ତ ।</span><span data-lang="hi" style="display:none">© २०२४ अमल विकास दल। सर्वाधिकार सुरक्षित।</span></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ FLOATING ELEMENTS ═══ -->
+<a href="https://wa.me/" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  💬<span class="tooltip"><span data-lang="en">Chat with us</span><span data-lang="od" style="display:none">ଆ ମ ସ ହ କ ଥ ା ହ ୁ ଅ</span><span data-lang="hi" style="display:none">हमसे बात करें</span></span>
+</a>
+<button class="back-to-top" aria-label="Back to top">↑</button>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script src="js/language.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/counter.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

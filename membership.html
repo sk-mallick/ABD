@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Join Amal Vikas Dal — become a member of Odisha's people's movement for justice, equality and development.">
+        <title>Membership — Amal Vikas Dal (ABD)</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Noto+Serif+Odia:wght@400;600&family=Tiro+Devanagari+Hindi&family=Lora:wght@600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/components.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <style>
+    /* ── PAGE BANNER ── */
+    .page-banner {
+      background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 60%, #1A237E 100%);
+      padding: 100px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .page-banner-content {
+      position: relative;
+      z-index: 1;
+    }
+    .page-banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 0.75rem;
+      line-height: 1.2;
+    }
+    .page-banner-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+      font-family: 'Lora', serif;
+    }
+    .breadcrumb {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .breadcrumb a { color: #FFD700; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { color: rgba(255,255,255,0.4); }
+
+    /* ── INTRO SECTION ── */
+    .membership-intro {
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+    .membership-intro p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #424242;
+    }
+
+    /* ── FORM SECTION ── */
+    .membership-form-section {
+      padding: 40px 0 60px;
+    }
+    .membership-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .form-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+      border-top: 4px solid #1B5E20;
+    }
+    .form-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #1B5E20;
+      margin-bottom: 1.5rem;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #1A1A1A;
+      font-size: 0.95rem;
+    }
+    .form-group label small {
+      font-weight: 400;
+      color: #757575;
+      font-size: 0.82rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #d0d0d0;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Lora', serif;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      background: #fafafa;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #1B5E20;
+      box-shadow: 0 0 0 3px rgba(27,94,32,0.12);
+      background: #fff;
+    }
+    .form-group input.error,
+    .form-group select.error {
+      border-color: #c62828;
+    }
+    .form-group .error-msg {
+      color: #c62828;
+      font-size: 0.8rem;
+      margin-top: 4px;
+      display: none;
+    }
+    .radio-group {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      padding-top: 4px;
+    }
+    .radio-group label {
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .radio-group input[type="radio"] {
+      width: auto;
+      accent-color: #1B5E20;
+    }
+    .btn-submit {
+      display: inline-block;
+      background: linear-gradient(135deg, #1B5E20, #2E7D32);
+      color: #FFD700;
+      padding: 16px 40px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      font-family: 'Lora', serif;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 16px rgba(27,94,32,0.3);
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(27,94,32,0.35);
+    }
+    .form-note {
+      margin-top: 1.5rem;
+      padding: 16px 20px;
+      background: #FFF8E1;
+      border-left: 4px solid #FFD700;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: #424242;
+      line-height: 1.7;
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .form-success .checkmark {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .form-success h3 {
+      font-family: 'Playfair Display', serif;
+      color: #1B5E20;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── ID CARD PREVIEW ── */
+    .id-card-wrapper {
+      position: sticky;
+      top: 120px;
+    }
+    .id-card-wrapper h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: #1A237E;
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+    .id-card {
+      background: #ffffff;
+      border: 3px solid transparent;
+      border-image: linear-gradient(180deg, #1B5E20, #FFD700, #1A237E) 1;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      overflow: hidden;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+    .id-card-header {
+      background: linear-gradient(135deg, #1B5E20, #2E7D32);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .id-card-header img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+    .id-card-header-text {
+      color: #ffffff;
+    }
+    .id-card-header-text .party-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .id-card-header-text .card-title {
+      font-size: 0.75rem;
+      color: #FFD700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .id-card-body {
+      padding: 24px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .id-photo-placeholder {
+      width: 90px;
+      height: 110px;
+      border: 2px dashed #bbb;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: #ccc;
+      flex-shrink: 0;
+      background: #f5f5f5;
+    }
+    .id-card-details {
+      font-size: 0.9rem;
+      color: #424242;
+      line-height: 1.8;
+    }
+    .id-card-details strong {
+      color: #1A1A1A;
+    }
+    .id-card-details .member-id {
+      display: inline-block;
+      background: #1A237E;
+      color: #FFD700;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+    .id-card-footer {
+      background: linear-gradient(135deg, #1A237E, #0D1B4B);
+      padding: 10px 24px;
+      text-align: center;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 1px;
+    }
+
+    /* ── MEMBERSHIP TIERS ── */
+    .tiers-section {
+      padding: 80px 0;
+      background: #f5f7f5;
+    }
+    .tiers-section .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      text-align: center;
+      color: #1B5E20;
+      margin-bottom: 0.5rem;
+    }
+    .tiers-section .section-sub {
+      text-align: center;
+      color: #757575;
+      margin-bottom: 3rem;
+      font-size: 1rem;
+    }
+    .tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .tier-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-top: 4px solid #1B5E20;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .tier-card:nth-child(2) { border-top-color: #1A237E; }
+    .tier-card:nth-child(3) { border-top-color: #FF6F00; }
+    .tier-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.14);
+    }
+    .tier-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .tier-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: #1B5E20;
+      margin-bottom: 0.75rem;
+    }
+    .tier-card:nth-child(2) h3 { color: #1A237E; }
+    .tier-card:nth-child(3) h3 { color: #FF6F00; }
+    .tier-card p {
+      color: #424242;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 968px) {
+      .membership-layout {
+        grid-template-columns: 1fr;
+      }
+      .id-card-wrapper {
+        position: static;
+        order: -1;
+      }
+    }
+    @media (max-width: 768px) {
+      .page-banner h1 { font-size: 2rem; }
+      .tiers-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+      }
+      .form-card { padding: 28px 20px; }
+      .id-card-body { flex-direction: column; align-items: center; text-align: center; }
+    }
+    </style>
+    </head>
+    <body>
+
+        <!-- ═══ NAVBAR ═══ -->
+        <header>
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <div class="container">
+                    <!-- Brand -->
+                    <a href="index.html" class="nav-brand">
+                        <img src="images/logo/abd-logo-white.png"
+                            alt="ABD Logo">
+                        <div class="nav-brand-text">
+                            <span class="nav-brand-name">
+                                <span data-lang="en">Amal Vikas Dal</span>
+                                <span data-lang="od" style="display:none">ଅମଳ
+                                    ବିକାଶ ଦଳ</span>
+                                <span data-lang="hi" style="display:none">अमल
+                                    विकास दल</span>
+                            </span>
+                            <span class="nav-brand-tagline">
+                                <span data-lang="en">Odisha Bahujan Samya</span>
+                                <span data-lang="od" style="display:none">ଓଡ଼ିଶା
+                                    ବହୁଜନ
+                                    ସାମ୍ୟ</span>
+                                <span data-lang="hi" style="display:none">ओडिशा
+                                    बहुजन
+                                    साम्य</span>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Nav Links -->
+                    <ul class="nav-links">
+                        <li><a href="index.html">
+                                <span data-lang="en">Home</span>
+                                <span data-lang="od" style="display:none">ମୁଖ୍ୟ
+                                    ପୃଷ୍ଠା</span>
+                                <span data-lang="hi" style="display:none">मुख्य
+                                    पृष्ठ</span>
+                            </a></li>
+                        <li><a href="about.html">
+                                <span data-lang="en">About</span>
+                                <span data-lang="od" style="display:none">ଆମ
+                                    ବିଷୟ</span>
+                                <span data-lang="hi" style="display:none">हमारे
+                                    बारे में</span>
+                            </a></li>
+                        <li><a href="manifesto.html">
+                                <span data-lang="en">Manifesto</span>
+                                <span data-lang="od"
+                                    style="display:none">ଇସ୍ତାହାର</span>
+                                <span data-lang="hi"
+                                    style="display:none">घोषणापत्र</span>
+                            </a></li>
+                        <li><a href="programs.html">
+                                <span data-lang="en">Programs</span>
+                                <span data-lang="od"
+                                    style="display:none">କାର୍ଯ୍ୟସୂଚୀ</span>
+                                <span data-lang="hi"
+                                    style="display:none">कार्यक्रम</span>
+                            </a></li>
+                        <li><a href="gallery.html">
+                                <span data-lang="en">Gallery</span>
+                                <span data-lang="od"
+                                    style="display:none">ଗ୍ୟାଲେରୀ</span>
+                                <span data-lang="hi"
+                                    style="display:none">गैलरी</span>
+                            </a></li>
+                        <li><a href="contact.html">
+                                <span data-lang="en">Contact</span>
+                                <span data-lang="od"
+                                    style="display:none">ଯୋଗାଯୋଗ</span>
+                                <span data-lang="hi"
+                                    style="display:none">संपर्क</span>
+                            </a></li>
+                    </ul>
+
+                    <!-- Right: Language toggle + Join Us -->
+                    <div class="nav-right">
+                        <div class="lang-toggle">
+                            <button class="lang-btn active" data-lang="en"
+                                aria-label="Switch to English">EN</button>
+                            <button class="lang-btn" data-lang="od"
+                                aria-label="Switch to Odia">ଓଡ଼</button>
+                            <button class="lang-btn" data-lang="hi"
+                                aria-label="Switch to Hindi">हि</button>
+                        </div>
+                        <a href="contact.html" class="btn-join">
+                            <span data-lang="en">Join Us</span>
+                            <span data-lang="od" style="display:none">ଯୋଗ
+                                ଦିଅ</span>
+                            <span data-lang="hi"
+                                style="display:none">जुड़ें</span>
+                        </a>
+                    </div>
+
+                    <!-- Hamburger -->
+                    <button class="hamburger" aria-label="Open menu"
+                        aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Mobile Full-Screen Menu -->
+            <div class="mobile-menu" role="dialog" aria-modal="true"
+                aria-label="Mobile navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">
+                            <span data-lang="en">Home</span>
+                            <span data-lang="od" style="display:none">ମୁଖ୍ୟ
+                                ପୃଷ୍ଠା</span>
+                            <span data-lang="hi" style="display:none">मुख्य
+                                पृष्ठ</span>
+                        </a></li>
+                    <li><a href="about.html">
+                            <span data-lang="en">About</span>
+                            <span data-lang="od" style="display:none">ଆମ
+                                ବିଷୟ</span>
+                            <span data-lang="hi" style="display:none">हमारे बारे
+                                में</span>
+                        </a></li>
+                    <li><a href="manifesto.html">
+                            <span data-lang="en">Manifesto</span>
+                            <span data-lang="od"
+                                style="display:none">ଇସ୍ତାହାର</span>
+                            <span data-lang="hi"
+                                style="display:none">घोषणापत्र</span>
+                        </a></li>
+                    <li><a href="programs.html">
+                            <span data-lang="en">Programs</span>
+                            <span data-lang="od"
+                                style="display:none">କାର୍ଯ୍ୟସୂଚୀ</span>
+                            <span data-lang="hi"
+                                style="display:none">कार्यक्रम</span>
+                        </a></li>
+                    <li><a href="gallery.html">
+                            <span data-lang="en">Gallery</span>
+                            <span data-lang="od"
+                                style="display:none">ଗ୍ୟାଲେରୀ</span>
+                            <span data-lang="hi"
+                                style="display:none">गैलरी</span>
+                        </a></li>
+                    <li><a href="contact.html">
+                            <span data-lang="en">Contact</span>
+                            <span data-lang="od"
+                                style="display:none">ଯୋଗାଯୋଗ</span>
+                            <span data-lang="hi"
+                                style="display:none">संपर्क</span>
+                        </a></li>
+                </ul>
+                <div class="mobile-lang-row">
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="od">ଓଡ଼</button>
+                    <button class="lang-btn" data-lang="hi">हि</button>
+                </div>
+                <a href="contact.html" class="btn btn-primary mobile-join">
+                    <span data-lang="en">Join the Movement</span>
+                    <span data-lang="od" style="display:none">ଆନ୍ଦୋଳନରେ ଯୋଗ
+                        ଦିଅ</span>
+                    <span data-lang="hi" style="display:none">आंदोलन में शामिल
+                        हों</span>
+                </a>
+                <button class="mobile-close" aria-label="Close menu"
+                    style="position:absolute;top:20px;right:20px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;">✕</button>
+            </div>
+        </header>
+
+        <main>
+
+            <!-- ═══ PAGE BANNER ═══ -->
+            <section class="page-banner">
+                <div class="container">
+                    <div class="breadcrumb">
+                        <a href="index.html"><span
+                                data-lang="en">Home</span><span data-lang="od"
+                                style="display:none">ମୁଖ୍ୟ ପୃଷ୍ଠା</span><span
+                                data-lang="hi" style="display:none">मुख्य
+                                पृष্ठ</span></a>
+                        <span>›</span>
+                        <span data-lang="en">Membership</span><span
+                            data-lang="od"
+                            style="display:none">ସଦସ୍ୟତା</span><span
+                            data-lang="hi" style="display:none">सदस्यता</span>
+                    </div>
+                    <h1>
+                        <span data-lang="en">Join the Movement</span>
+                        <span data-lang="od" style="display:none">ଆନ୍ଦୋଳନରେ ଯୋଗ
+                            ଦିଅ</span>
+                        <span data-lang="hi" style="display:none">आंदोलन में
+                            शामिल हों</span>
+                    </h1>
+                    <p class="page-banner-subtitle">
+                        <span data-lang="en">Your Participation Is Our
+                            Strength</span>
+                        <span data-lang="od" style="display:none">ଆପଣଙ୍କ
+                            ଅଂଶଗ୍ରହଣ ଆମ ଶକ୍ତି</span>
+                        <span data-lang="hi" style="display:none">आपकी भागीदारी
+                            हमारी शक्ति</span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- ═══ INTRO ═══ -->
+            <section class="membership-intro reveal">
+                <div class="container">
+                    <p>
+                        <span data-lang="en">ABD is more than a party — it is a
+                            people's movement. Every citizen who believes in
+                            justice, equality, and a better Odisha is welcome to
+                            join us. Your participation is our strength.</span>
+                        <span data-lang="od" style="display:none">ABD କେବଳ ଏକ
+                            ରାଜନୈତିକ ଦଳ ନୁହେଁ — ଏହା ଏକ ଜନ ଆନ୍ଦୋଳନ। ନ୍ୟାୟ, ସମତା ଓ
+                            ଏକ ଉତ୍ତମ ଓଡ଼ିଶାରେ ବିଶ୍ୱାସ କରୁଥିବା ପ୍ରତ୍ୟେକ ନାଗରିକ ଆମ
+                            ସହ ଯୋଗ ଦେଇ ପାରିବେ। ଆପଣଙ୍କ ଅଂଶଗ୍ରହଣ ଆମ ଶକ୍ତି।</span>
+                        <span data-lang="hi" style="display:none">ABD केवल एक
+                            पार्टी नहीं — यह एक जन आंदोलन है। न्याय, समता और एक
+                            बेहतर ओडिशा में विश्वास रखने वाला हर नागरिक हमसे
+                            जुड़ सकता है। आपकी भागीदारी हमारी शक्ति है।</span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- ═══ FORM + ID CARD ═══ -->
+            <section class="membership-form-section">
+                <div class="container">
+                    <div class="membership-layout">
+
+                        <!-- LEFT: Membership Form -->
+                        <div class="form-card reveal">
+                            <h2>
+                                <span data-lang="en">Membership
+                                    Application</span>
+                                <span data-lang="od"
+                                    style="display:none">ସଦସ୍ୟତା ଆବେଦନ</span>
+                                <span data-lang="hi"
+                                    style="display:none">सदस्यता आवेदन</span>
+                            </h2>
+
+                            <form id="membershipForm" novalidate>
+
+                                <!-- Full Name -->
+                                <div class="form-group">
+                                    <label>
+                                        <span data-lang="en">Full Name *</span>
+                                        <span data-lang="od"
+                                            style="display:none">ପୂର୍ଣ ନାମ
+                                            *</span>
+                                        <span data-lang="hi"
+                                            style="display:none">पूर्ण नाम
+                                            *</span>
+                                    </label>
+                                    <input type="text" id="fullName"
+                                        name="fullName" required>
+                                    <div class="error-msg" id="fullNameError">
+                                        <span data-lang="en">Please enter your
+                                            full name</span>
+                                        <span data-lang="od"
+                                            style="display:none">ଦୟାକରି ଆପଣଙ୍କ
+                                            ପୂର୍ଣ ନାମ ଲେଖନ୍ତୁ</span>
+                                        <span data-lang="hi"
+                                            style="display:none">कृपया अपना
+                                            पूर्ण नाम दर्ज करें</span>
+                                    </div>
+                                </div>
+
+                                <!-- Age -->
+                                <div class="form-group">
+                                    <label>
+                                        <span data-lang="en">Age *</span>
+                                        <span data-lang="od"
+                                            style="display:none">ବୟସ *</span>
+                                        <span data-lang="hi"
+                                            style="display:none">आयु *</span>
+                                    </label>
+                                    <input type="number" id="age" name="age"
+                                        min="18" max="120" required>
+                                    <div class="error-msg" id="ageError">
+                                        <span data-lang="en">Please enter a
+                                            valid age (18+)</span>
+                                        <span data-lang="od"
+                                            style="display:none">ଦୟାକରି ଏକ ବୈଧ
+                                            ବୟସ ଲେଖନ୍ତୁ (୧୮+)</span>
+                                        <span data-lang="hi"
+                                            style="display:none">कृपया वैध आयु
+                                            दर्ज करें (18+)</span>
+                                    </div>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="form-group">
+                                    <label>
+                                        <span data-lang="en">Phone Number
+                                            *</span>
+                                        <span data-lang="od"
+                                            style="display:none">ଫୋନ ନଂବର
+                                            *</span>
+                                        <span data-lang="hi"
+                                            style="display:none">फ़ोन नंबर
+                                            *</span>
+                                    </label>
+                                    <input type="tel" id="phone" name="phone"
+                                        pattern="[0-9]{10}" required>
+                                    <div class="error-msg" id="phoneError">
+                                        <span data-lang="en">Please enter a
+                                            valid 10-digit phone number</span>
+                                        <span data-lang="od"
+                                            style="display:none">ଦୟାକରି ଏକ ବୈଧ
+                                            ୧୦-ଅଙ୍କ ଫୋନ ନଂବର ଲେଖନ୍ତୁ</span>
+                                        <span data-lang="hi"
+                                            style="display:none">कृपया 10 अंकों
+                                            का वैध फ़ोन नंबर दर्ज करें</span>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="form-group">
+                                    <label>
+                                        <span data-lang="en">Email
+                                            <small>(optional)</small></span>
+                                        <span data-lang="od"
+                                            style="display:none">ଇମେଲ
+                                            <small>(ଐଚ୍ଛିକ)</small></span>
+                                        <span data-lang="hi"
+                                            style="display:none">ईमेल
+                                            <small>(वैकल्पिक)</small></span>
+                                    </label>
+                                    <input type="email" id="email" name="email">
+                                </div>
+
+                                <!-- Gender -->
+                                <div class="form-group">
+                                    <label>
+                                        <span data-lang="en">Gender *</span>
+                                        <span data-lang="od"
+                                            style="display:none">ଲିଙ୍ଗ *</span>
+                                        <span data-lang="hi"
+                                            style="display:none">लिंग *</span>
+                                    </label>
+                                    <div class="radio-group">
+                                        <label><input type="radio" name="gender"
+                                                value="male" required>
+                                            <span data-lang="en">Male</span>
+                                            <span data-lang="od"
+                                                style="display:none">ପୁରୁଷ</span>
+                                            <span data-lang="hi"
+                                                style="display:none">पुरुष</span>
+                                        </label>
+                                        <label><input type="radio" name="gender"
+                                                value="female">
+                                            <span data-lang="en">Female</span>
+                                            <span data-lang="od"
+                                                style="display:none">ମହିଳା</span>
+                                            <span data-lang="hi"
+                                                style="display:none">महिला</span>
+                                        </label>
+                                        <label><input type="radio" name="gender"
+                                                value="other">
+                                            <span data-lang="en">Other</span>
+                                            <span data-lang="od"
+                                                style="display:none">ଅନ୍ୟ</span>
+                                            <span data-lang="hi"
+                                                style="display:none">अन्य</span>
+                                        </label>
+                                    </div>
+                                    <div class="error-msg" id="genderError">
+                                        <span data-lang="en">Please select your
+                                            gender</span>
+                                        <span data-lang="od"
+                                            style="display:none">ଦୟାକରି ଲିଙ୍ଗ
+                                            ଚୟନ କରନ୍ତୁ</span>
+                                        <span data-lang="hi"
+                                            style="display:none">कृपया लिंग
+                                            चुनें</span>
+                                    </div>
+                                </div>
+
+                                <!-- District -->
+                                <div class="form-group">
+                                    <label>
+                                        <span data-lang="en">District *</span>
+                                        <span data-lang="od"
+                                            style="display:none">ଜିଲ୍ଲା *</span>
+                                        <span data-lang="hi"
+                                            style="display:none">जिला *</span>
+                                    </label>
+                                    <select id="district" name="district"
+                                        required>
+                                        <option value>— Select / ଚୟନ କରନ୍ତୁ /
+                                            चुनें —</option>
+                                        <option value="Angul">Angul</option>
+                                        <option
+                                            value="Balangir">Balangir</option>
+                                        <option
+                                            value="Balasore">Balasore</option>
+                                        <option value="Bargarh">Bargarh</option>
+                                        <option value="Bhadrak">Bhadrak</option>
+                                        <option value="Boudh">Boudh</option>
+                                        <option value="Cuttack">Cuttack</option>
+                                        <option value="Deogarh">Deogarh</option>
+                                        <option
+                                            value="Dhenkanal">Dhenkanal</option>
+                                        <option
+                                            value="Gajapati">Gajapati</option>
+                                        <option value="Ganjam">Ganjam</option>
+                                        <option
+                                            value="Jagatsinghpur">Jagatsinghpur</option>
+                                        <option value="Jajpur">Jajpur</option>
+                                        <option
+                                            value="Jharsuguda">Jharsuguda</option>
+                                        <option
+                                            value="Kalahandi">Kalahandi</option>
+                                        <option
+                                            value="Kandhamal">Kandhamal</option>
+                                        <option
+                                            value="Kendrapara">Kendrapara</option>
+                                        <option
+                                            value="Kendujhar">Kendujhar</option>
+                                        <option value="Khordha">Khordha</option>
+                                        <option value="Koraput">Koraput</option>
+                                        <option
+                                            value="Malkangiri">Malkangiri</option>
+                                        <option
+                                            value="Mayurbhanj">Mayurbhanj</option>
+                                        <option
+                                            value="Nabarangpur">Nabarangpur</option>
+                                        <option
+                                            value="Nayagarh">Nayagarh</option>
+                                        <option value="Nuapada">Nuapada</option>
+                                        <option value="Puri">Puri</option>
+                                        <option
+                                            value="Rayagada">Rayagada</option>
+                                        <option
+                                            value="Sambalpur">Sambalpur</option>
+                                        <option
+                                            value="Subarnapur">Subarnapur</option>
+                                        <option
+                                            value="Sundargarh">Sundargarh</option>
+                                    </select>
+                                    <div class="error-msg" id="districtError">
+                                        <span data-lang="en">Please select your
+                                            district</span>
+                                        <span data-lang="od"
+                                            style="display:none">ଦୟାକରି ଜିଲ୍ଲା
+                                            ଚୟନ କରନ୍ତୁ</span>
+                                        <span data-lang="hi"
+                                            style="display:none">कृपया जिला
+                                            चुनें</span>
+                                    </div>
+                                </div>
+
+                                <!-- Block/Tehsil -->
+                                <div class="form-group">
+                                    <label>
+                                        <span data-lang="en">Block / Tehsil
+                                            *</span>
+                                        <span data-lang="od"
+                                            style="display:none">ବ୍ଲକ / ତହସିଲ
+                                            *</span>
+                                        <span data-lang="hi"
+                                            style="display:none">ब्लॉक / तहसील
+                                            *</span>
+                                    </label>
+                                    <input type="text" id="block" name="block"
+                                        required>
+                                    <div class="error-msg" id="blockError">
+                                        <span data-lang="en">Please enter your
+                                            block/tehsil</span>
+                                        <span data-lang="od"
+                                            style="display:none">ଦୟାକରି
+                                            ବ୍ଲକ/ତହସିଲ ଲେଖନ୍ତୁ</span>
+                                        <span data-lang="hi"
+                                            style="display:none">कृपया
+                                            ब्लॉक/तहसील दर्ज करें</span>
+                                    </div>
+                                </div>
+
+                                <!-- Gram Panchayat -->
+                                <div class="form-group">
+                                    <label>
+                                        <span data-lang="en">Gram Panchayat
+                                            *</span>
+                                        <span data-lang="od"
+                                            style="display:none">ଗ୍ରାମ ପଞ୍ଚାୟତ
+                                            *</span>
+                                        <span data-lang="hi"
+                                            style="display:none">ग्राम पंचायत
+                                            *</span>
+                                    </label>
+                                    <input type="text" id="gramPanchayat"
+                                        name="gramPanchayat" required>
+                                    <div class="error-msg"
+                                        id="gramPanchayatError">
+                                        <span data-lang="en">Please enter your
+                                            gram panchayat</span>
+                                        <span data-lang="od"
+                                            style="display:none">ଦୟାକରି ଗ୍ରାମ
+                                            ପଞ୍ଚାୟତ ଲେଖନ୍ତୁ</span>
+                                        <span data-lang="hi"
+                                            style="display:none">कृपया ग्राम
+                                            पंचायत दर्ज करें</span>
+                                    </div>
+                                </div>
+
+                                <!-- Category -->
+                                <div class="form-group">
+                                    <label>
+                                        <span data-lang="en">Category</span>
+                                        <span data-lang="od"
+                                            style="display:none">ବର୍ଗ</span>
+                                        <span data-lang="hi"
+                                            style="display:none">श्रेणी</span>
+                                    </label>
+                                    <select id="category" name="category">
+                                        <option value>— Select / ଚୟନ କରନ୍ତୁ /
+                                            चुनें —</option>
+                                        <option value="SC">SC</option>
+                                        <option value="ST">ST</option>
+                                        <option value="OBC">OBC</option>
+                                        <option value="General">General</option>
+                                        <option
+                                            value="Religious Minority">Religious
+                                            Minority</option>
+                                    </select>
+                                </div>
+
+                                <!-- Volunteer -->
+                                <div class="form-group">
+                                    <label>
+                                        <span data-lang="en">Are you willing to
+                                            volunteer?</span>
+                                        <span data-lang="od"
+                                            style="display:none">ଆପଣ
+                                            ସ୍ୱେଚ୍ଛାସେବୀ ଭାବେ କାମ କରିବାକୁ
+                                            ଇଚ୍ଛୁକ?</span>
+                                        <span data-lang="hi"
+                                            style="display:none">क्या आप
+                                            स्वयंसेवक बनना चाहते हैं?</span>
+                                    </label>
+                                    <div class="radio-group">
+                                        <label><input type="radio"
+                                                name="volunteer" value="yes">
+                                            <span data-lang="en">Yes</span>
+                                            <span data-lang="od"
+                                                style="display:none">ହଁ</span>
+                                            <span data-lang="hi"
+                                                style="display:none">हाँ</span>
+                                        </label>
+                                        <label><input type="radio"
+                                                name="volunteer" value="no">
+                                            <span data-lang="en">No</span>
+                                            <span data-lang="od"
+                                                style="display:none">ନା</span>
+                                            <span data-lang="hi"
+                                                style="display:none">नहीं</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit -->
+                                <button type="submit" class="btn-submit">
+                                    <span data-lang="en">Submit
+                                        Application</span>
+                                    <span data-lang="od"
+                                        style="display:none">ଆବେଦନ ଦାଖଲ
+                                        କରନ୍ତୁ</span>
+                                    <span data-lang="hi"
+                                        style="display:none">आवेदन जमा
+                                        करें</span>
+                                </button>
+                            </form>
+
+                            <!-- Success message -->
+                            <div class="form-success" id="formSuccess">
+                                <div class="checkmark">✅</div>
+                                <h3>
+                                    <span data-lang="en">Application
+                                        Submitted!</span>
+                                    <span data-lang="od"
+                                        style="display:none">ଆବେଦନ ଦାଖଲ
+                                        ହୋଇଛି!</span>
+                                    <span data-lang="hi"
+                                        style="display:none">आवेदन जमा हो
+                                        गया!</span>
+                                </h3>
+                                <p>
+                                    <span data-lang="en">Thank you for joining
+                                        ABD. We will contact you soon.</span>
+                                    <span data-lang="od"
+                                        style="display:none">ABD ରେ ଯୋଗ
+                                        ଦେଇଥିବାରୁ ଧନ୍ୟବାଦ। ଆମେ ଶୀଘ୍ର ଆପଣଙ୍କ ସହ
+                                        ଯୋଗାଯୋଗ କରିବୁ।</span>
+                                    <span data-lang="hi"
+                                        style="display:none">ABD से जुड़ने के
+                                        लिए धन्यवाद। हम जल्द ही आपसे संपर्क
+                                        करेंगे।</span>
+                                </p>
+                            </div>
+
+                            <!-- Note -->
+                            <div class="form-note">
+                                <span data-lang="en">📌 After submission, an ABD
+                                    representative from your district will
+                                    contact you within 7 working days.</span>
+                                <span data-lang="od" style="display:none">📌
+                                    ଆବେଦନ ପରେ, ଆପଣଙ୍କ ଜିଲ୍ଲାର ABD ପ୍ରତିନିଧି ୭
+                                    କାର୍ଯ୍ୟଦିବସ ମଧ୍ୟରେ ଆପଣଙ୍କ ସହ ଯୋଗାଯୋଗ
+                                    କରିବେ।</span>
+                                <span data-lang="hi" style="display:none">📌
+                                    आवेदन के बाद, आपके जिले का ABD प्रतिनिधि ७
+                                    कार्यदिवसों में आपसे संपर्क करेगा।</span>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT: ID Card Preview -->
+                        <div class="id-card-wrapper reveal">
+                            <h2>
+                                <span data-lang="en">Membership Card
+                                    Preview</span>
+                                <span data-lang="od"
+                                    style="display:none">ସଦସ୍ୟତା କାର୍ଡ
+                                    ପ୍ରିଭ୍ୟୁ</span>
+                                <span data-lang="hi"
+                                    style="display:none">सदस्यता कार्ड
+                                    पूर्वावलोकन</span>
+                            </h2>
+                            <div class="id-card">
+                                <div class="id-card-header">
+                                    <img src="images/logo/abd-logo-white.png"
+                                        alt="ABD Logo">
+                                    <div class="id-card-header-text">
+                                        <div class="party-name">
+                                            <span data-lang="en">Amal Vikas
+                                                Dal</span>
+                                            <span data-lang="od"
+                                                style="display:none">ଅମଳ ବିକାଶ
+                                                ଦଳ</span>
+                                            <span data-lang="hi"
+                                                style="display:none">अमल विकास
+                                                दल</span>
+                                        </div>
+                                        <div class="card-title">
+                                            <span data-lang="en">ABD MEMBERSHIP
+                                                CARD</span>
+                                            <span data-lang="od"
+                                                style="display:none">ABD ସଦସ୍ୟତା
+                                                କାର୍ଡ</span>
+                                            <span data-lang="hi"
+                                                style="display:none">ABD सदस्यता
+                                                कार्ड</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="id-card-body">
+                                    <div class="id-photo-placeholder">👤</div>
+                                    <div class="id-card-details">
+                                        <div>
+                                            <strong><span
+                                                    data-lang="en">Name:</span><span
+                                                    data-lang="od"
+                                                    style="display:none">ନାମ:</span><span
+                                                    data-lang="hi"
+                                                    style="display:none">नाम:</span></strong>
+                                            <span id="cardName">
+                                                <span data-lang="en">[Your
+                                                    Name]</span>
+                                                <span data-lang="od"
+                                                    style="display:none">[ଆପଣଙ୍କ
+                                                    ନାମ]</span>
+                                                <span data-lang="hi"
+                                                    style="display:none">[आपका
+                                                    नाम]</span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <strong><span
+                                                    data-lang="en">District:</span><span
+                                                    data-lang="od"
+                                                    style="display:none">ଜିଲ୍ଲା:</span><span
+                                                    data-lang="hi"
+                                                    style="display:none">जिला:</span></strong>
+                                            <span id="cardDistrict">
+                                                <span data-lang="en">[Your
+                                                    District]</span>
+                                                <span data-lang="od"
+                                                    style="display:none">[ଆପଣଙ୍କ
+                                                    ଜିଲ୍ଲା]</span>
+                                                <span data-lang="hi"
+                                                    style="display:none">[आपका
+                                                    जिला]</span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <strong><span data-lang="en">Member
+                                                    ID:</span><span
+                                                    data-lang="od"
+                                                    style="display:none">ସଦସ୍ୟ
+                                                    ID:</span><span
+                                                    data-lang="hi"
+                                                    style="display:none">सदस्य
+                                                    ID:</span></strong>
+                                            <span
+                                                class="member-id">ABD-XXXX</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="id-card-footer">
+                                    <span data-lang="en">FOR JUSTICE. FOR
+                                        EQUALITY. FOR ODISHA.</span>
+                                    <span data-lang="od"
+                                        style="display:none">ନ୍ୟାୟ ପାଇଁ। ସମତା
+                                        ପାଇଁ। ଓଡ଼ିଶା ପାଇଁ।</span>
+                                    <span data-lang="hi"
+                                        style="display:none">न्याय के लिए। समता
+                                        के लिए। ओडिशा के लिए।</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ MEMBERSHIP TIERS ═══ -->
+            <section class="tiers-section">
+                <div class="container">
+                    <h2 class="section-heading reveal">
+                        <span data-lang="en">Membership Tiers</span>
+                        <span data-lang="od" style="display:none">ସଦସ୍ୟତା
+                            ସ୍ତର</span>
+                        <span data-lang="hi" style="display:none">सदस्यता
+                            स्तर</span>
+                    </h2>
+                    <p class="section-sub reveal">
+                        <span data-lang="en">Choose how you want to contribute
+                            to the movement</span>
+                        <span data-lang="od" style="display:none">ଆନ୍ଦୋଳନରେ ଆପଣ
+                            କିପରି ଯୋଗଦାନ କରିବାକୁ ଚାହାନ୍ତି ତାହା ଚୟନ କରନ୍ତୁ</span>
+                        <span data-lang="hi" style="display:none">चुनें कि आप
+                            आंदोलन में कैसे योगदान करना चाहते हैं</span>
+                    </p>
+                    <div class="tiers-grid">
+
+                        <!-- Tier 1: General Member -->
+                        <div class="tier-card reveal">
+                            <div class="tier-icon">🤝</div>
+                            <h3>
+                                <span data-lang="en">General Member</span>
+                                <span data-lang="od" style="display:none">ସାଧାରଣ
+                                    ସଦସ୍ୟ</span>
+                                <span data-lang="hi"
+                                    style="display:none">सामान्य सदस्य</span>
+                            </h3>
+                            <p>
+                                <span data-lang="en">Open to all citizens of
+                                    Odisha who support the vision of justice,
+                                    equality, and development for all.</span>
+                                <span data-lang="od"
+                                    style="display:none">ସମସ୍ତଙ୍କ ପାଇଁ ନ୍ୟାୟ,
+                                    ସମତା ଓ ବିକାଶର ଦୃଷ୍ଟିକୋଣକୁ ସମର୍ଥନ କରୁଥିବା
+                                    ଓଡ଼ିଶାର ସମସ୍ତ ନାଗରିକଙ୍କ ପାଇଁ ଖୋଲା।</span>
+                                <span data-lang="hi" style="display:none">ओडिशा
+                                    के उन सभी नागरिकों के लिए खुला जो सबके लिए
+                                    न्याय, समता और विकास के दृष्टिकोण का समर्थन
+                                    करते हैं।</span>
+                            </p>
+                        </div>
+
+                        <!-- Tier 2: Active Worker -->
+                        <div class="tier-card reveal">
+                            <div class="tier-icon">⚡</div>
+                            <h3>
+                                <span data-lang="en">Active Worker</span>
+                                <span data-lang="od" style="display:none">ସକ୍ରିୟ
+                                    କର୍ମୀ</span>
+                                <span data-lang="hi" style="display:none">सक्रिय
+                                    कार्यकर्ता</span>
+                            </h3>
+                            <p>
+                                <span data-lang="en">For members who regularly
+                                    participate in party activities, campaigns,
+                                    and grassroots organizing.</span>
+                                <span data-lang="od" style="display:none">ଦଳୀୟ
+                                    କାର୍ଯ୍ୟକଳାପ, ପ୍ରଚାର ଓ ତୃଣମୂଳ ସଂଗଠନରେ ନିୟମିତ
+                                    ଅଂଶଗ୍ରହଣ କରୁଥିବା ସଦସ୍ୟଙ୍କ ପାଇଁ।</span>
+                                <span data-lang="hi" style="display:none">उन
+                                    सदस्यों के लिए जो पार्टी गतिविधियों,
+                                    अभियानों और जमीनी स्तर के संगठन में नियमित
+                                    भागीदारी करते हैं।</span>
+                            </p>
+                        </div>
+
+                        <!-- Tier 3: Youth Wing -->
+                        <div class="tier-card reveal">
+                            <div class="tier-icon">🌱</div>
+                            <h3>
+                                <span data-lang="en">Youth Wing</span>
+                                <span data-lang="od" style="display:none">ଯୁବ
+                                    ସଂଗଠନ</span>
+                                <span data-lang="hi" style="display:none">युवा
+                                    संगठन</span>
+                            </h3>
+                            <p>
+                                <span data-lang="en">For citizens aged 18–35 who
+                                    want to lead change and shape the future of
+                                    Odisha.</span>
+                                <span data-lang="od" style="display:none">୧୮–୩୫
+                                    ବର୍ଷ ବୟସର ନାଗରିକଙ୍କ ପାଇଁ ଯେଉଁମାନେ ପରିବର୍ତ୍ତନ
+                                    ଆଣିବାକୁ ଓ ଓଡ଼ିଶାର ଭବିଷ୍ୟତ ଗଢ଼ିବାକୁ
+                                    ଚାହାନ୍ତି।</span>
+                                <span data-lang="hi" style="display:none">18–35
+                                    वर्ष की आयु के नागरिकों के लिए जो बदलाव लाना
+                                    और ओडिशा का भविष्य बनाना चाहते हैं।</span>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ═══ FOOTER ═══ -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+
+                    <!-- Col 1: Brand -->
+                    <div class="footer-col">
+                        <div class="footer-brand">
+                            <img src="images/logo/abd-logo-white.png"
+                                alt="ABD Logo">
+                            <span class="footer-brand-name">
+                                <span data-lang="en">Amal Vikas Dal</span>
+                                <span data-lang="od" style="display:none">ଅମଳ
+                                    ବିକାଶ ଦଳ</span>
+                                <span data-lang="hi" style="display:none">अमल
+                                    विकास दल</span>
+                            </span>
+                        </div>
+                        <p>
+                            <span data-lang="en">Amal Vikas Dal (Odisha Bahujan
+                                Samya) —
+                                fighting for justice, equality, and real
+                                development for every
+                                citizen of Odisha.</span>
+                            <span data-lang="od" style="display:none">ଅମଳ ବିକାଶ
+                                ଦଳ (ଓଡ଼ିଶା
+                                ବହୁଜନ ସାମ୍ୟ) — ଓଡ଼ିଶାର ପ୍ରତ୍ୟେକ ନାଗରିକ ପାଇଁ
+                                ନ୍ୟାୟ, ସମତା ଓ ପ୍ରକୃତ
+                                ବିକାଶ ପାଇଁ ସଂଘର୍ଷ।</span>
+                            <span data-lang="hi" style="display:none">अमल विकास
+                                दल (ओडिशा
+                                बहुजन साम्य) — ओडिशा के हर नागरिक के लिए न्याय,
+                                समता और वास्तविक
+                                विकास के लिए संघर्षरत।</span>
+                        </p>
+                        <p class="footer-tagline">
+                            <span
+                                data-lang="en">"For Justice. For Equality. For Odisha."</span>
+                            <span data-lang="od"
+                                style="display:none">"ନ୍ୟାୟ ପାଇଁ। ସମତା ପାଇଁ। ଓଡ଼ିଶା ପାଇଁ।"</span>
+                            <span data-lang="hi"
+                                style="display:none">"न्याय के लिए। समता के लिए। ओडिशा के लिए।"</span>
+                        </p>
+                    </div>
+
+                    <!-- Col 2: Quick Links -->
+                    <div class="footer-col">
+                        <h4>
+                            <span data-lang="en">Quick Links</span>
+                            <span data-lang="od" style="display:none">ଦ୍ରୁତ
+                                ଲିଙ୍କ</span>
+                            <span data-lang="hi" style="display:none">त्वरित
+                                लिंक</span>
+                        </h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><span
+                                        data-lang="en">Home</span><span
+                                        data-lang="od"
+                                        style="display:none">ମୁଖ୍ୟ
+                                        ପୃଷ୍ଠା</span><span
+                                        data-lang="hi"
+                                        style="display:none">मुख्य
+                                        पृष्ठ</span></a></li>
+                            <li><a href="about.html"><span
+                                        data-lang="en">About</span><span
+                                        data-lang="od" style="display:none">ଆମ
+                                        ବିଷୟ</span><span
+                                        data-lang="hi"
+                                        style="display:none">हमारे बारे
+                                        में</span></a></li>
+                            <li><a href="manifesto.html"><span
+                                        data-lang="en">Manifesto</span><span
+                                        data-lang="od"
+                                        style="display:none">ଇସ୍ତାହାର</span><span
+                                        data-lang="hi"
+                                        style="display:none">घोषणापत्र</span></a></li>
+                            <li><a href="programs.html"><span
+                                        data-lang="en">Programs</span><span
+                                        data-lang="od"
+                                        style="display:none">କାର୍ଯ୍ୟସୂଚୀ</span><span
+                                        data-lang="hi"
+                                        style="display:none">कार्यक्रम</span></a></li>
+                            <li><a href="gallery.html"><span
+                                        data-lang="en">Gallery</span><span
+                                        data-lang="od"
+                                        style="display:none">ଗ୍ୟାଲେରୀ</span><span
+                                        data-lang="hi"
+                                        style="display:none">गैलरी</span></a></li>
+                            <li><a href="contact.html"><span
+                                        data-lang="en">Contact</span><span
+                                        data-lang="od"
+                                        style="display:none">ଯୋଗାଯୋଗ</span><span
+                                        data-lang="hi"
+                                        style="display:none">संपर्क</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Programs -->
+                    <div class="footer-col">
+                        <h4>
+                            <span data-lang="en">Programs</span>
+                            <span data-lang="od" style="display:none">କାର୍ଯ୍ୟ
+                                ସୂଚୀ</span>
+                            <span data-lang="hi"
+                                style="display:none">कार्यक्रम</span>
+                        </h4>
+                        <ul class="footer-links">
+                            <li><a href="programs.html#agriculture"><span
+                                        data-lang="en">Agriculture</span><span
+                                        data-lang="od"
+                                        style="display:none">କୃଷି</span><span
+                                        data-lang="hi"
+                                        style="display:none">कृषि</span></a></li>
+                            <li><a href="programs.html#land"><span
+                                        data-lang="en">Land
+                                        Rights</span><span data-lang="od"
+                                        style="display:none">ଭୂମି</span><span
+                                        data-lang="hi"
+                                        style="display:none">भूमि</span></a></li>
+                            <li><a href="programs.html#education"><span
+                                        data-lang="en">Education</span><span
+                                        data-lang="od"
+                                        style="display:none">ଶିକ୍ଷା</span><span
+                                        data-lang="hi"
+                                        style="display:none">शिक्षा</span></a></li>
+                            <li><a href="programs.html#health"><span
+                                        data-lang="en">Health</span><span
+                                        data-lang="od"
+                                        style="display:none">ସ୍ୱାସ୍ଥ୍ୟ</span><span
+                                        data-lang="hi"
+                                        style="display:none">स्वास्थ्य</span></a></li>
+                            <li><a href="programs.html#mining"><span
+                                        data-lang="en">Mining</span><span
+                                        data-lang="od"
+                                        style="display:none">ଖଣି</span><span
+                                        data-lang="hi"
+                                        style="display:none">खनन</span></a></li>
+                            <li><a href="programs.html#women"><span
+                                        data-lang="en">Women &amp;
+                                        Youth</span><span data-lang="od"
+                                        style="display:none">ମହିଳା
+                                        ଓ ଯୁବ</span><span data-lang="hi"
+                                        style="display:none">महिला
+                                        एवं युवा</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 4: Contact + Social -->
+                    <div class="footer-col">
+                        <h4>
+                            <span data-lang="en">Contact Us</span>
+                            <span data-lang="od"
+                                style="display:none">ଯୋଗାଯୋଗ</span>
+                            <span data-lang="hi" style="display:none">संपर्क
+                                करें</span>
+                        </h4>
+                        <div class="contact-info-item">
+                            <span class="icon">📍</span>
+                            <span>
+                                <span data-lang="en">Bhubaneswar, Odisha,
+                                    India</span>
+                                <span data-lang="od"
+                                    style="display:none">ଭୁବନେଶ୍ୱର, ଓଡ଼ିଶା,
+                                    ଭାରତ</span>
+                                <span data-lang="hi"
+                                    style="display:none">भुवनेश्वर, ओडिशा,
+                                    भारत</span>
+                            </span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="icon">✉️</span>
+                            <span>abdodisha@gmail.com</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="icon">📱</span>
+                            <span>
+                                <span data-lang="en">Contact via WhatsApp</span>
+                                <span data-lang="od"
+                                    style="display:none">ହ୍ୱାଟ୍ସଆପ ମାଧ୍ୟମରେ ଯୋଗ
+                                    ଦିଅ</span>
+                                <span data-lang="hi"
+                                    style="display:none">WhatsApp से संपर्क
+                                    करें</span>
+                            </span>
+                        </div>
+                        <div class="social-icons mt-3">
+                            <a href="#" class="social-icon"
+                                aria-label="WhatsApp">💬</a>
+                            <a href="#" class="social-icon"
+                                aria-label="Facebook">📘</a>
+                            <a href="#" class="social-icon"
+                                aria-label="YouTube">▶️</a>
+                            <a href="#" class="social-icon"
+                                aria-label="Twitter">🐦</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>
+                        <span data-lang="en">© 2024 Amal Vikas Dal (Odisha
+                            Bahujan Samya).
+                            All Rights Reserved.</span>
+                        <span data-lang="od" style="display:none">© ୨୦୨୪ ଅମଳ
+                            ବିକାଶ ଦଳ
+                            (ଓଡ଼ିଶା ବହୁଜନ ସାମ୍ୟ)। ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ।</span>
+                        <span data-lang="hi" style="display:none">© २०२४ अमल
+                            विकास दल (ओडिशा
+                            बहुजन साम्य)। सर्वाधिकार सुरक्षित।</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ═══ FLOATING ELEMENTS ═══ -->
+        <a href="https://wa.me/" class="whatsapp-fab" target="_blank"
+            rel="noopener"
+            aria-label="Chat with us on WhatsApp">
+            💬
+            <span class="tooltip">
+                <span data-lang="en">Chat with us</span>
+                <span data-lang="od" style="display:none">ଆମ ସହ କଥା ହୁଅ</span>
+                <span data-lang="hi" style="display:none">हमसे बात करें</span>
+            </span>
+        </a>
+        <button class="back-to-top" aria-label="Back to top">↑</button>
+
+        <!-- ═══ SCRIPTS ═══ -->
+        <script src="js/language.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+    /* ── Live ID Card Preview ── */
+    document.addEventListener('DOMContentLoaded', () => {
+      const nameInput = document.getElementById('fullName');
+      const districtInput = document.getElementById('district');
+      const cardName = document.getElementById('cardName');
+      const cardDistrict = document.getElementById('cardDistrict');
+
+      if (nameInput && cardName) {
+        nameInput.addEventListener('input', () => {
+          const val = nameInput.value.trim();
+          cardName.textContent = val || '[Your Name]';
+        });
+      }
+      if (districtInput && cardDistrict) {
+        districtInput.addEventListener('change', () => {
+          const val = districtInput.value;
+          cardDistrict.textContent = val || '[Your District]';
+        });
+      }
+    });
+
+    /* ── Form Validation ── */
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('membershipForm');
+      if (!form) return;
+
+      function showError(id) {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'block';
+      }
+      function hideError(id) {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      }
+      function clearErrors() {
+        document.querySelectorAll('.error-msg').forEach(e => e.style.display = 'none');
+        document.querySelectorAll('.error').forEach(e => e.classList.remove('error'));
+      }
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        clearErrors();
+        let valid = true;
+
+        const fullName = document.getElementById('fullName');
+        if (!fullName.value.trim()) {
+          fullName.classList.add('error');
+          showError('fullNameError');
+          valid = false;
+        }
+
+        const age = document.getElementById('age');
+        if (!age.value || parseInt(age.value) < 18) {
+          age.classList.add('error');
+          showError('ageError');
+          valid = false;
+        }
+
+        const phone = document.getElementById('phone');
+        if (!phone.value || !/^[0-9]{10}$/.test(phone.value)) {
+          phone.classList.add('error');
+          showError('phoneError');
+          valid = false;
+        }
+
+        const gender = document.querySelector('input[name="gender"]:checked');
+        if (!gender) {
+          showError('genderError');
+          valid = false;
+        }
+
+        const district = document.getElementById('district');
+        if (!district.value) {
+          district.classList.add('error');
+          showError('districtError');
+          valid = false;
+        }
+
+        const block = document.getElementById('block');
+        if (!block.value.trim()) {
+          block.classList.add('error');
+          showError('blockError');
+          valid = false;
+        }
+
+        const gp = document.getElementById('gramPanchayat');
+        if (!gp.value.trim()) {
+          gp.classList.add('error');
+          showError('gramPanchayatError');
+          valid = false;
+        }
+
+        if (valid) {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        }
+      });
+    });
+    </script>
+    </body>
+</html>
